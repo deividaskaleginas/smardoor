@@ -1,0 +1,1 @@
+.burger{display:flex;justify-content:space-around;flex-flow:column nowrap;width:3rem;height:2rem}.burger__line{width:3rem;height:.12rem;border-radius:.625rem;transition:all .3s linear;background-color:var(--black)}.burger__line.--active:nth-child(1){transform:translateX(-5px)}.burger__line.--active:nth-child(3){transform:translateX(-5px)}/*# sourceMappingURL=burger.css.map */
