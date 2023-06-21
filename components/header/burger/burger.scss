@@ -1,3 +1,5 @@
+@use "../../../styles//utils/" as u;
+
 .burger {
   display: flex;
   justify-content: space-around;
@@ -20,5 +22,9 @@
     &:nth-child(3) {
       transform: translateX(-5px);
     }
+  }
+
+  @include u.breakpoint(laptop) {
+    display: none;
   }
 }

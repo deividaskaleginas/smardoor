@@ -6,6 +6,7 @@ import { Burger } from "./burger/Burger";
 
 import "./header.scss";
 import { Logo } from "./logo/Logo";
+import { Navigation } from "./navigation/Navigation";
 import { SideBar } from "./sidebar/SideBar";
 
 export const Header: React.FC = () => {
@@ -17,6 +18,7 @@ export const Header: React.FC = () => {
         <Logo />
         <Burger open={open} setOpen={setOpen} />
         <SideBar open={open} setOpen={setOpen} />
+        <Navigation />
       </div>
     </header>
   );

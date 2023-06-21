@@ -16,7 +16,6 @@ interface SideBarProps {
 }
 
 export const SideBar: React.FC<SideBarProps> = ({ open, setOpen }) => {
-  const [subNav, setSubNav] = useState<boolean>(false);
   const [activeNavs, setActiveNavs] = useState<{ [key in SIDEBAR]: Boolean }>({
     [SIDEBAR.PREKES]: false,
     [SIDEBAR.PASLAUGOS]: false,

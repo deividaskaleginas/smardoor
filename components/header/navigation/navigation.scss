@@ -1,0 +1,53 @@
+@use "../../../styles//utils/" as u;
+
+.navigation {
+  @include u.breakpoint-down(tabletXL) {
+    display: none;
+  }
+
+  display: flex;
+  gap: 2rem;
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+
+    &__itemBlock {
+      position: relative;
+      &__item {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--black);
+      }
+
+      &__item:hover {
+        color: var(--primary);
+      }
+
+      &__subNav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 1rem;
+
+    &__block {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &__link {
+        color: var(--blue);
+      }
+    }
+  }
+}

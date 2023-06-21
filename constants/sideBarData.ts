@@ -68,9 +68,97 @@ export const sidebarData: SideBarType[] = [
       {
         title: "Vartų automatika",
         path: "kategorijos/vartu-automatika",
+        subNavNested: [
+          {
+            title: "Kelio stulpeliai",
+            path: "kategorijos/vartu-automatika/kelio-stulpeliai",
+            image: "../public/assets/images/kelioStulpelis.png",
+          },
+          {
+            title: "Garažo vartų automatika",
+            path: "kategorijos/vartu-automatika/garažo-vartų-automatika",
+            image: "../public/assets/images/garazoVartuAutomatika.png",
+          },
+          {
+            title: "Kelio barjerai",
+            path: "kategorijos/vartu-automatika/kelio-barjerai",
+            image: "../public/assets/images/kelioBarjerai.jpeg",
+          },
+          {
+            title: "Stumdomų vartų automatika",
+            path: "kategorijos/vartu-automatika/stumdomu-vartu-automatika",
+            image: "../public/assets/images/stumdomuVartuAutomatika.png",
+          },
+          {
+            title: "Atveriamų vartų automatika",
+            path: "kategorijos/vartu-automatika/atveriamu-vartu-automatika",
+            image: "../public/assets/images/atveriamuVartuAutomatika.jpeg",
+          },
+          {
+            title: "Priedai",
+            path: "kategorijos/vartu-automatika/priedai",
+            image: "../public/assets/images/priedai.png",
+          },
+        ],
       },
       { title: "Markizės", path: "/kategorijos/markizes" },
-      { title: "Priedai", path: "/kategorijos/priedai" },
+      {
+        title: "Priedai",
+        path: "/kategorijos/priedai",
+        subNavNested: [
+          {
+            title: "Mygtukai",
+            path: "/kategorijos/priedai/mygtukai",
+            image: "../public/assets/images/mygtukas.png",
+          },
+          {
+            title: "Maitinimo šaltiniai",
+            path: "/kategorijos/priedai/maitinimo-saltiniai",
+            image: "../public/assets/images/maitinimoSaltinis.png",
+          },
+          {
+            title: "Pritraukikliai",
+            path: "/kategorijos/priedai/pritraukikliai",
+            image: "../public/assets/images/duruPritraukejas.webp",
+          },
+          {
+            title: "Instaliacinės medžiagos",
+            path: "/kategorijos/priedai/instaliacines-medziagos",
+            image: "../public/assets/images/instaliacinesMedziagos.png",
+          },
+          {
+            title: "Raktai, pulteliai",
+            path: "/kategorijos/priedai/raktai-pulteliai",
+            image: "../public/assets/images/pultelis.png",
+          },
+          {
+            title: "Rėlės",
+            path: "/kategorijos/priedai/reles",
+            image: "../public/assets/images/reles.jpeg",
+          },
+          {
+            title: "Elektromagnetai",
+            path: "/kategorijos/priedai/elektromagnetai",
+            image: "../public/assets/images/elektromagnetas.png",
+          },
+          {
+            title: "Elektrosklendės",
+            path: "/kategorijos/priedai/elektroskelndes",
+            image: "../public/assets/images/elektrosklende.jpeg",
+          },
+        ],
+      },
+      {
+        title: "Spynos",
+        path: "/kategorijos/spynos",
+        subNavNested: [
+          {
+            title: "Kodinės dėžutės",
+            path: "/kategorijos/kodines-dezutes",
+            image: "../public/assets/images/kodineDezute.jpeg",
+          },
+        ],
+      },
     ],
   },
   {
