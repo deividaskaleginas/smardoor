@@ -154,8 +154,18 @@ export const sidebarData: SideBarType[] = [
         subNavNested: [
           {
             title: "Kodinės dėžutės",
-            path: "/kategorijos/kodines-dezutes",
+            path: "/kategorijos/spynos/kodines-dezutes",
             image: "../public/assets/images/kodineDezute.jpeg",
+          },
+          {
+            title: "Išmaniosios spynos",
+            path: "/kategorijos/spynos/ismaniosios-spynos",
+            image: "../public/assets/images/ismaniojiSpyna.png",
+          },
+          {
+            title: "Elektrinės spynos",
+            path: "/kategorijos/spynos/elektrines-spynos",
+            image: "../public/assets/images/elektrineSpyna.jpeg",
           },
         ],
       },
