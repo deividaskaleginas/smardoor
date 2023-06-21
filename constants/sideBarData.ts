@@ -167,6 +167,63 @@ export const sidebarData: SideBarType[] = [
             path: "/kategorijos/spynos/elektrines-spynos",
             image: "../public/assets/images/elektrineSpyna.jpeg",
           },
+          {
+            title: "Mechaninės spynos",
+            path: "/kategorijos/spynos/mechanines-spynos",
+            image: "../public/assets/images/mechanineSpyna.png",
+          },
+        ],
+      },
+      {
+        title: "Jutikliai ir Apsaugos įranga",
+        path: "/kategorijos/jutikliai-apsaugos-iranga",
+        subNavNested: [
+          {
+            title: "Daugiafunkciniai jutikliai",
+            path: "/kategorijos/jutikliai-apsaugos-iranga/daugiafunkciniai-jutikliai",
+            image: "/public/assets/images/daugiafunkcinisJutiklis.jpeg",
+          },
+          {
+            title: "Anglies monoksido jutikliai",
+            path: "/kategorijos/jutikliai-apsaugos-iranga/anglies-monoksido-jutikliai",
+            image: "/public/assets/images/angliemonoksidoJutiklis.jpeg",
+          },
+          {
+            title: "Dujų jutikliai",
+            path: "/kategorijos/jutikliai-apsaugos-iranga/duju-jutikliai",
+            image: "/public/assets/images/dujuJutikliai.jpeg",
+          },
+          {
+            title: "Dūmų jutikliai",
+            path: "/kategorijos/jutikliai-apsaugos-iranga/dumu-jutikliai",
+            image: "/public/assets/images/dumuJutiklis.jpeg",
+          },
+          {
+            title: "Cigarečių dūmų jutikliai",
+            path: "/kategorijos/jutikliai-apsaugos-iranga/cigareciu-dumu-jutikliai",
+            image: "/public/assets/images/cigareciuJutikliai.jpeg",
+          },
+          {
+            title: "Signalizacijos",
+            path: "/kategorijos/jutikliai-apsaugos-iranga/signalizacijos",
+            image: "/public/assets/images/signalizacija.jpeg",
+          },
+        ],
+      },
+      {
+        title: "Vaizdo stebėjimo sistemos",
+        path: "/kategorijos/vaizdo-stebejimo-sistemos",
+        subNavNested: [
+          {
+            title: "Mašinos numerių nuskaitymas",
+            path: "/kategorijos/vaizdo-stebejimo-sistemos/masinos-numeriu-nuskaitymas",
+            image: "/public/assets/images/masinosNumeriuNuskaitymas.png",
+          },
+          {
+            title: "NVR įrenginiai",
+            path: "/kategorijos/vaizdo-stebejimo-sistemos/nvr-irenginiai",
+            image: "/public/assets/images/nvrIrenginiai.jpeg",
+          },
         ],
       },
     ],
