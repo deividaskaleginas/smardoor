@@ -1,0 +1,61 @@
+@use "../../styles//utils/" as u;
+
+.contacts {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+
+  &__container {
+    max-width: 70rem;
+    padding: 2rem;
+    &__dataBlock {
+      @include u.breakpoint(laptop) {
+        display: flex;
+        gap: 10rem;
+      }
+      &__requisites {
+        &__blockName {
+          font-size: 1.4rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid var(--grey);
+        }
+        &__title {
+          font-size: 1.6rem;
+        }
+        &__paragraph {
+          line-height: 1.5rem;
+          &__span {
+            font-weight: 700;
+          }
+        }
+      }
+      &__contacts {
+        &__blockName {
+          font-size: 1.4rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid var(--grey);
+        }
+        &__list {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 0;
+          list-style: none;
+          &__item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            &__paragraph {
+              margin: 0;
+
+              &__span {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -44,23 +44,24 @@ export const SideBar: React.FC<SideBarProps> = ({ open, setOpen }) => {
               return (
                 <div
                   key={index}
-                  onClick={() =>
-                    setActiveNavs({
-                      ...activeNavs,
-                      [key]: !activeNavs[key],
-                    })
-                  }
                   className="sideBar__container__navigation__unorderList__block"
                 >
                   <div className="sideBar__container__navigation__unorderList__block__categoryTitle">
                     <Link
                       className="sideBar__container__navigation__unorderList__block__categoryTitle__listItem"
                       href={path}
+                      onClick={() => setOpen(!open)}
                     >
                       {title}
                     </Link>
                     {subNav && (
                       <Image
+                        onClick={() =>
+                          setActiveNavs({
+                            ...activeNavs,
+                            [key]: !activeNavs[key],
+                          })
+                        }
                         className={
                           subNav && activeNavs[key]
                             ? "sideBar__container__navigation__unorderList__block__categoryTitle__icon --active"

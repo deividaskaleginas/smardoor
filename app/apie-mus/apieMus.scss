@@ -1,0 +1,31 @@
+@use "../../styles//utils/" as u;
+
+.aboutUsPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  &__container {
+    max-width: 70rem;
+    padding: 2rem;
+    &__title {
+    }
+
+    &__data {
+      @include u.breakpoint(laptop) {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 3rem;
+      }
+      &__imageWrapper {
+        display: flex;
+        align-items: center;
+        &__image {
+          object-fit: contain;
+          width: 100%;
+          position: relative;
+          height: unset;
+        }
+      }
+    }
+  }
+}

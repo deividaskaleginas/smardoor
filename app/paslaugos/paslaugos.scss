@@ -1,0 +1,11 @@
+.servisesPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+
+  &__container {
+    &__title {
+      padding-left: 2rem;
+    }
+  }
+}
