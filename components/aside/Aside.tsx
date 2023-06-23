@@ -36,75 +36,66 @@ export const Aside: React.FC = () => {
   return (
     <aside className="aside">
       <nav className="aside__navigation">
-        {prekes.map(({ subNav }, index) => {
-          return (
-            <ul key={index} className="aside__navigation__list">
-              {subNav?.map(({ title, path, key, subNavNested }, index) => {
-                return (
-                  <div
-                    key={index}
-                    onMouseEnter={() =>
-                      setActiveSubNavs({
-                        ...activeSubNavs,
-                        [key]: !activeSubNavs[key],
-                      })
-                    }
-                    onMouseLeave={() =>
-                      setActiveSubNavs({
-                        ...activeSubNavs,
-                        [key]: !activeSubNavs[key],
-                      })
-                    }
-                    className="aside__navigation__list__block"
+        {prekes.map(({ subNav }, index) => (
+          <ul key={index} className="aside__navigation__list">
+            {subNav?.map(({ title, path, key, subNavNested }, index) => (
+              <div
+                key={index}
+                onMouseEnter={() =>
+                  setActiveSubNavs({
+                    ...activeSubNavs,
+                    [key]: !activeSubNavs[key],
+                  })
+                }
+                onMouseLeave={() =>
+                  setActiveSubNavs({
+                    ...activeSubNavs,
+                    [key]: !activeSubNavs[key],
+                  })
+                }
+                className="aside__navigation__list__block"
+              >
+                <div className="aside__navigation__list__block__itemBlock">
+                  <Link
+                    className="aside__navigation__list__block__itemBlock__item"
+                    href={path}
                   >
-                    <div className="aside__navigation__list__block__itemBlock">
-                      <Link
-                        className="aside__navigation__list__block__itemBlock__item"
-                        href={path}
-                      >
-                        {title}{" "}
-                        {subNavNested && (
-                          <Image
-                            src={chevronRight}
-                            alt="rodyklės į dešinę ikona"
-                          />
-                        )}
-                      </Link>
-                    </div>
-
-                    {activeSubNavs[key] && subNavNested && (
-                      <div className="aside__navigation__list__block__subNavNested">
-                        <ul className="aside__navigation__list__block__subNavNested__list">
-                          {subNavNested.map(({ title, path, image }, index) => {
-                            return (
-                              <div
-                                key={index}
-                                className="aside__navigation__list__block__subNavNested__list__block"
-                              >
-                                <Image
-                                  src={image}
-                                  alt="test"
-                                  height={78}
-                                  width={78}
-                                />
-                                <Link
-                                  href={path}
-                                  className="aside__navigation__list__block__subNavNested__list__block__item"
-                                >
-                                  {title}
-                                </Link>
-                              </div>
-                            );
-                          })}
-                        </ul>
-                      </div>
+                    {title}{" "}
+                    {subNavNested && (
+                      <Image src={chevronRight} alt="rodyklės į dešinę ikona" />
                     )}
+                  </Link>
+                </div>
+
+                {activeSubNavs[key] && subNavNested && (
+                  <div className="aside__navigation__list__block__subNavNested">
+                    <ul className="aside__navigation__list__block__subNavNested__list">
+                      {subNavNested.map(({ title, path, image }, index) => (
+                        <div
+                          key={index}
+                          className="aside__navigation__list__block__subNavNested__list__block"
+                        >
+                          <Image
+                            src={image}
+                            alt="test"
+                            height={78}
+                            width={78}
+                          />
+                          <Link
+                            href={path}
+                            className="aside__navigation__list__block__subNavNested__list__block__item"
+                          >
+                            {title}
+                          </Link>
+                        </div>
+                      ))}
+                    </ul>
                   </div>
-                );
-              })}
-            </ul>
-          );
-        })}
+                )}
+              </div>
+            ))}
+          </ul>
+        ))}
       </nav>
     </aside>
   );

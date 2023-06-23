@@ -11,6 +11,8 @@ export type SubNavType = {
   title: string;
   path: string;
   key: SUBNAV;
+  image?: StaticImageData;
+  alt?: string;
   subNavNested?: SubNavNestedType[];
 };
 

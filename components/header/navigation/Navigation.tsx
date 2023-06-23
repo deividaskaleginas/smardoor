@@ -46,17 +46,15 @@ export const Navigation: React.FC = () => {
 
                 {activeNavs[key] && subNav && (
                   <ul className="navigation__list__itemBlock__subNav">
-                    {subNav?.map(({ title, path }, index) => {
-                      return (
-                        <Link
-                          key={index}
-                          href={path}
-                          className="navigation__list__itemBlock__subNav__listItem"
-                        >
-                          {title}
-                        </Link>
-                      );
-                    })}
+                    {subNav?.map(({ title, path }, index) => (
+                      <Link
+                        key={index}
+                        href={path}
+                        className="navigation__list__itemBlock__subNav__listItem"
+                      >
+                        {title}
+                      </Link>
+                    ))}
                   </ul>
                 )}
               </div>

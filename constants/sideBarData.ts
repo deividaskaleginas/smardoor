@@ -47,6 +47,10 @@ import signalizacijos from "../public/assets/images/signalizacija.jpeg";
 import masinosNumeriuNuskaitymas from "../public/assets/images/masinosNumeriuNuskaitymas.png";
 import nvrIrenginiai from "../public/assets/images/nvrIrenginiai.jpeg";
 
+//Kategorijos
+import telefonspyne from "../public/assets/images/categories/telefonspyne.jpeg";
+import markizes from "../public/assets/images/categories/markize.jpeg";
+
 export enum SIDEBAR {
   PREKES = "prekes",
   PASLAUGOS = "paslaugos",
@@ -80,6 +84,8 @@ export const sidebarData: SideBarType[] = [
         title: "Telefonspynės",
         key: SUBNAV.TELEFONSPYNES,
         path: "/telefonspynes",
+        image: telefonspyne,
+        alt: "`Eura` gamintojo telefonspynė",
         subNavNested: [
           {
             title: "Monitoriai",
@@ -132,6 +138,8 @@ export const sidebarData: SideBarType[] = [
         title: "Vartų automatika",
         key: SUBNAV.VARTU_AUTOMATIKA,
         path: "/vartu-automatika",
+        image: kelioBarjerai,
+        alt: "Pakeliamo kelio barjero nuotrauka",
         subNavNested: [
           {
             title: "Kelio stulpeliai",
@@ -169,11 +177,15 @@ export const sidebarData: SideBarType[] = [
         title: "Markizės",
         key: SUBNAV.MARKIZES,
         path: "/markizes",
+        image: markizes,
+        alt: "Išskleistos `Motorline` gamintojo, geltonos spalvos markizės nuotrauka",
       },
       {
         title: "Priedai",
         key: SUBNAV.PRIEDAI,
         path: "/priedai",
+        image: mygtukai,
+        alt: "Išėjimo mygtuko nuotrauka",
         subNavNested: [
           {
             title: "Mygtukai",
@@ -221,6 +233,8 @@ export const sidebarData: SideBarType[] = [
         title: "Spynos",
         key: SUBNAV.SPYNOS,
         path: "/spynos",
+        image: ismaniosiosSpynos,
+        alt: "Išmaniosios durų spynos nuotrauka",
         subNavNested: [
           {
             title: "Kodinės dėžutės",
@@ -248,6 +262,8 @@ export const sidebarData: SideBarType[] = [
         title: "Jutikliai ir Apsaugos įranga",
         key: SUBNAV.JUTIKLIAI_APSAUGOS_IRANGA,
         path: "/jutikliai-apsaugos-iranga",
+        image: dumuJutikliai,
+        alt: "Dūmų jutiklio nuotrauka",
         subNavNested: [
           {
             title: "Daugiafunkciniai jutikliai",
@@ -285,6 +301,8 @@ export const sidebarData: SideBarType[] = [
         title: "Vaizdo stebėjimo sistemos",
         key: SUBNAV.VAIZDO_STEBEJIMO_SISTEMOS,
         path: "/vaizdo-stebejimo-sistemos",
+        image: masinosNumeriuNuskaitymas,
+        alt: "Vaizdo stebėjimo kameros nuotrauka",
         subNavNested: [
           {
             title: "Mašinos numerių nuskaitymas",
