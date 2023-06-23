@@ -9,6 +9,8 @@ import { SIDEBAR, sidebarData } from "@/constants/sideBarData";
 import Link from "next/link";
 
 import arrowDown from "../../../public/assets/icons/arrowDown.svg";
+import envelope from "../../../public/assets/icons/envelope.svg";
+import phone from "../../../public/assets/icons/phone.svg";
 
 interface SideBarProps {
   open: boolean;
@@ -24,9 +26,9 @@ export const SideBar: React.FC<SideBarProps> = ({ open, setOpen }) => {
     [SIDEBAR.KATALOGAI]: false,
   });
   return (
-    <aside className={open ? "aside --active" : "aside"}>
-      <div className="aside__container">
-        <div className="aside__container__top">
+    <aside className={open ? "sideBar --active" : "sideBar"}>
+      <div className="sideBar__container">
+        <div className="sideBar__container__top">
           <Logo />
           <Image
             src={close}
@@ -36,8 +38,8 @@ export const SideBar: React.FC<SideBarProps> = ({ open, setOpen }) => {
             onClick={() => setOpen(!open)}
           />
         </div>
-        <nav className="aside__container__navigation">
-          <ul className="aside__container__navigation__unorderList">
+        <nav className="sideBar__container__navigation">
+          <ul className="sideBar__container__navigation__unorderList">
             {sidebarData.map(({ key, title, path, subNav }, index) => {
               return (
                 <div
@@ -48,11 +50,11 @@ export const SideBar: React.FC<SideBarProps> = ({ open, setOpen }) => {
                       [key]: !activeNavs[key],
                     })
                   }
-                  className="aside__container__navigation__unorderList__block"
+                  className="sideBar__container__navigation__unorderList__block"
                 >
-                  <div className="aside__container__navigation__unorderList__block__categoryTitle">
+                  <div className="sideBar__container__navigation__unorderList__block__categoryTitle">
                     <Link
-                      className="aside__container__navigation__unorderList__block__categoryTitle__listItem"
+                      className="sideBar__container__navigation__unorderList__block__categoryTitle__listItem"
                       href={path}
                     >
                       {title}
@@ -61,8 +63,8 @@ export const SideBar: React.FC<SideBarProps> = ({ open, setOpen }) => {
                       <Image
                         className={
                           subNav && activeNavs[key]
-                            ? "aside__container__navigation__unorderList__block__categoryTitle__icon --active"
-                            : "aside__container__navigation__unorderList__block__categoryTitle__icon"
+                            ? "sideBar__container__navigation__unorderList__block__categoryTitle__icon --active"
+                            : "sideBar__container__navigation__unorderList__block__categoryTitle__icon"
                         }
                         src={arrowDown}
                         alt="arrow down svg"
@@ -73,13 +75,13 @@ export const SideBar: React.FC<SideBarProps> = ({ open, setOpen }) => {
                   </div>
 
                   {activeNavs[key] && subNav && (
-                    <ul className="aside__container__navigation__unorderList__block__subNav">
+                    <ul className="sideBar__container__navigation__unorderList__block__subNav">
                       {subNav?.map(({ title, path }, index) => {
                         return (
                           <Link
                             key={index}
                             href={path}
-                            className="aside__container__navigation__unorderList__block__subNav__listItem"
+                            className="sideBar__container__navigation__unorderList__block__subNav__listItem"
                           >
                             {title}
                           </Link>
@@ -91,6 +93,31 @@ export const SideBar: React.FC<SideBarProps> = ({ open, setOpen }) => {
               );
             })}
           </ul>
+          <div className="sideBar__container__navigation__contactsBlock">
+            <div className="sideBar__container__navigation__contactsBlock__contactBlock">
+              <Image
+                src={phone}
+                alt="Mobilaus telefono ikona"
+                width={32}
+                height={32}
+              />
+              <a
+                className="sideBar__container__navigation__contactsBlock__contactBlock__link"
+                href="tel: +37068444099"
+              >
+                +370 684 44099
+              </a>
+            </div>
+            <div className="sideBar__container__navigation__contactsBlock__contactBlock">
+              <Image src={envelope} alt="Voko ikona" width={32} height={32} />
+              <a
+                className="sideBar__container__navigation__contactsBlock__contactBlock__link"
+                href="mailto: info@cargolita.lt"
+              >
+                info@cargolita.lt
+              </a>
+            </div>
+          </div>
         </nav>
       </div>
     </aside>

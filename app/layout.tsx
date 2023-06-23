@@ -1,9 +1,11 @@
 import "../dist/style.css";
 import { Noto_Sans } from "next/font/google";
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/footer/Footer";
 
 const notoSans = Noto_Sans({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--notoSans-font",
 });
 
@@ -19,7 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${notoSans.variable}`}>{children}</body>
+      <body className={`${notoSans.variable}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

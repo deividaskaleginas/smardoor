@@ -1,11 +1,73 @@
 import { SideBarType } from "@/types/sideBar";
 
+//Telefonspynes
+import monitorius from "../public/assets/images/monitorius.webp";
+import audioVienoAbonento from "../public/assets/images/audioVienoAbonento.png";
+import audioDaugiaabonentinis from "../public/assets/images/audioDaugiaabonentes.png";
+import videoVienoAbonento from "../public/assets/images/videoVienoAbonento.png";
+import videoDaugiaabonentinis from "../public/assets/images/videoDaugiaabonentes.jpeg";
+import daugiabuciams from "../public/assets/images/daugiabuciams.png";
+import ieigosKontrole from "../public/assets/images/ieigosKontrole.jpeg";
+import papildomaIranga from "../public/assets/images/papildomaIranga.png";
+import rageliai from "../public/assets/images/rageliai.png";
+
+//Vartu automatika
+import kelioStukpeliai from "../public/assets/images/kelioStulpelis.png";
+import garazoVartuAutomatika from "../public/assets/images/garazoVartuAutomatika.png";
+import kelioBarjerai from "../public/assets/images/kelioBarjerai.jpeg";
+import stumdovuVartuAutomatika from "../public/assets/images/stumdomuVartuAutomatika.png";
+import atveriamuVartuAutomatika from "../public/assets/images/atveriamuVartuAutomatika.jpeg";
+import priedai from "../public/assets/images/priedai.png";
+
+//Priedai
+import mygtukai from "../public/assets/images/mygtukas.png";
+import maitinimoSaltiniai from "../public/assets/images/maitinimoSaltinis.png";
+import pritraukikliai from "../public/assets/images/duruPritraukejas.webp";
+import instaliacinesMedziagos from "../public/assets/images/instaliacinesMedziagos.png";
+import raktaiPulteliai from "../public/assets/images/pultelis.png";
+import reles from "../public/assets/images/reles.jpeg";
+import elektromagnetai from "../public/assets/images/elektromagnetas.png";
+import elektroSklendes from "../public/assets/images/elektrosklende.jpeg";
+
+//Spynos
+import kodinesDezutes from "../public/assets/images/kodineDezute.jpeg";
+import ismaniosiosSpynos from "../public/assets/images/ismaniojiSpyna.png";
+import elektrinesSpynos from "../public/assets/images/elektrineSpyna.jpeg";
+import mechaninesSpynos from "../public/assets/images/mechanineSpyna.png";
+
+//Jutikliai ir apsaugos iranga
+import daugiafunkciniaiJutikliai from "../public/assets/images/daugiafunkcinisJutiklis.jpeg";
+import angliesMonoksidoJutikliai from "../public/assets/images/angliemonoksidoJutiklis.jpeg";
+import dujuJutikliai from "../public/assets/images/dujuJutikliai.jpeg";
+import dumuJutikliai from "../public/assets/images/dumuJutiklis.jpeg";
+import cigareciuDumuJutikliai from "../public/assets/images/cigareciuJutikliai.jpeg";
+import signalizacijos from "../public/assets/images/signalizacija.jpeg";
+
+//Vaizdo stebejimo sistemos
+import masinosNumeriuNuskaitymas from "../public/assets/images/masinosNumeriuNuskaitymas.png";
+import nvrIrenginiai from "../public/assets/images/nvrIrenginiai.jpeg";
+
 export enum SIDEBAR {
   PREKES = "prekes",
   PASLAUGOS = "paslaugos",
   APIE_MUS = "apieMus",
   KONTAKTAI = "kontaktai",
   KATALOGAI = "katalogai",
+}
+
+export enum SUBNAV {
+  TELEFONSPYNES = "telefonspynes",
+  VARTU_AUTOMATIKA = "vartai",
+  MARKIZES = "markizes",
+  PRIEDAI = "priedai",
+  SPYNOS = "spynos",
+  JUTIKLIAI_APSAUGOS_IRANGA = "jutikliaiApsaugosIranga",
+  VAIZDO_STEBEJIMO_SISTEMOS = "vaizdoStebejimoSistemos",
+  TELEFONSPYNIU_REMONTAS = "telefonspyniuRemontas",
+  SPYNU_REMONTAS = "spynuRemontas",
+  DURU_REMONTAS = "duruRemontas",
+  KOPIJAVIMAS = "kopijavimas",
+  SUVIRINTOJO_PASLAUGOS = "suvirintojoPaslaugos",
 }
 
 export const sidebarData: SideBarType[] = [
@@ -16,213 +78,223 @@ export const sidebarData: SideBarType[] = [
     subNav: [
       {
         title: "Telefonspynės",
-        path: "/kategorijos/telefonspynes",
+        key: SUBNAV.TELEFONSPYNES,
+        path: "/telefonspynes",
         subNavNested: [
           {
             title: "Monitoriai",
-            path: "/kategorijos/telefonspynes/monitoriai",
-            image: "../public/assets/images/monitorius.webp",
+            path: "/telefonspynes/monitoriai",
+            image: monitorius,
           },
           {
             title: "Audio vieno abonento",
-            path: "/kategorijos/telefonspynes/audio-vieno-abonento",
-            image: "../public/assets/images/audioVienoAbonento.png",
+            path: "/telefonspynes/audio-vieno-abonento",
+            image: audioVienoAbonento,
           },
           {
             title: "Audio daugiaabonentės",
-            path: "/kategorijos/telefonspynes/audio-daugiaabonentes",
-            image: "../public/assets/images/audioDaugiaabonentes.png",
+            path: "/telefonspynes/audio-daugiaabonentes",
+            image: audioDaugiaabonentinis,
           },
           {
             title: "Video vieno abonento",
-            path: "/kategorijos/telefonspynes/video-vieno-abonento",
-            image: "../public/assets/images/videoVienoAbonento.png",
+            path: "/telefonspynes/video-vieno-abonento",
+            image: videoVienoAbonento,
           },
           {
             title: "Video daugiaabonentės",
-            path: "/kategorijos/telefonspynes/video-daugiaabonentės",
-            image: "../public/assets/images/videoDaugiaabonentes.jpeg",
+            path: "/telefonspynes/video-daugiaabonentės",
+            image: videoDaugiaabonentinis,
           },
           {
             title: "Daugiabučiams",
-            path: "/kategorijos/telefonspynes/daugiabuciams",
-            image: "../public/assets/images/daugiabuciams.png",
+            path: "/telefonspynes/daugiabuciams",
+            image: daugiabuciams,
           },
           {
             title: "Įeigos kontrolė",
-            path: "/kategorijos/telefonspynes/ieigos-kontrole",
-            image: "../public/assets/images/ieigosKontrole.jpeg",
+            path: "/telefonspynes/ieigos-kontrole",
+            image: ieigosKontrole,
           },
           {
             title: "Papildoma įranga",
-            path: "/kategorijos/telefonspynes/papildoma-iranga",
-            image: "../public/assets/images/papildomaIranga.png",
+            path: "/telefonspynes/papildoma-iranga",
+            image: papildomaIranga,
           },
           {
             title: "Rageliai",
-            path: "/kategorijos/telefonspynes/rageliai",
-            image: "../public/assets/images/rageliai.png",
+            path: "/telefonspynes/rageliai",
+            image: rageliai,
           },
         ],
       },
       {
         title: "Vartų automatika",
-        path: "kategorijos/vartu-automatika",
+        key: SUBNAV.VARTU_AUTOMATIKA,
+        path: "/vartu-automatika",
         subNavNested: [
           {
             title: "Kelio stulpeliai",
-            path: "kategorijos/vartu-automatika/kelio-stulpeliai",
-            image: "../public/assets/images/kelioStulpelis.png",
+            path: "/vartu-automatika/kelio-stulpeliai",
+            image: kelioStukpeliai,
           },
           {
             title: "Garažo vartų automatika",
-            path: "kategorijos/vartu-automatika/garažo-vartų-automatika",
-            image: "../public/assets/images/garazoVartuAutomatika.png",
+            path: "/vartu-automatika/garažo-vartų-automatika",
+            image: garazoVartuAutomatika,
           },
           {
             title: "Kelio barjerai",
-            path: "kategorijos/vartu-automatika/kelio-barjerai",
-            image: "../public/assets/images/kelioBarjerai.jpeg",
+            path: "/vartu-automatika/kelio-barjerai",
+            image: kelioBarjerai,
           },
           {
             title: "Stumdomų vartų automatika",
-            path: "kategorijos/vartu-automatika/stumdomu-vartu-automatika",
-            image: "../public/assets/images/stumdomuVartuAutomatika.png",
+            path: "/vartu-automatika/stumdomu-vartu-automatika",
+            image: stumdovuVartuAutomatika,
           },
           {
             title: "Atveriamų vartų automatika",
-            path: "kategorijos/vartu-automatika/atveriamu-vartu-automatika",
-            image: "../public/assets/images/atveriamuVartuAutomatika.jpeg",
+            path: "/vartu-automatika/atveriamu-vartu-automatika",
+            image: atveriamuVartuAutomatika,
           },
           {
             title: "Priedai",
-            path: "kategorijos/vartu-automatika/priedai",
-            image: "../public/assets/images/priedai.png",
+            path: "/vartu-automatika/priedai",
+            image: priedai,
           },
         ],
       },
-      { title: "Markizės", path: "/kategorijos/markizes" },
+      {
+        title: "Markizės",
+        key: SUBNAV.MARKIZES,
+        path: "/markizes",
+      },
       {
         title: "Priedai",
-        path: "/kategorijos/priedai",
+        key: SUBNAV.PRIEDAI,
+        path: "/priedai",
         subNavNested: [
           {
             title: "Mygtukai",
-            path: "/kategorijos/priedai/mygtukai",
-            image: "../public/assets/images/mygtukas.png",
+            path: "/priedai/mygtukai",
+            image: mygtukai,
           },
           {
             title: "Maitinimo šaltiniai",
-            path: "/kategorijos/priedai/maitinimo-saltiniai",
-            image: "../public/assets/images/maitinimoSaltinis.png",
+            path: "/priedai/maitinimo-saltiniai",
+            image: maitinimoSaltiniai,
           },
           {
             title: "Pritraukikliai",
-            path: "/kategorijos/priedai/pritraukikliai",
-            image: "../public/assets/images/duruPritraukejas.webp",
+            path: "/priedai/pritraukikliai",
+            image: pritraukikliai,
           },
           {
             title: "Instaliacinės medžiagos",
-            path: "/kategorijos/priedai/instaliacines-medziagos",
-            image: "../public/assets/images/instaliacinesMedziagos.png",
+            path: "/priedai/instaliacines-medziagos",
+            image: instaliacinesMedziagos,
           },
           {
             title: "Raktai, pulteliai",
-            path: "/kategorijos/priedai/raktai-pulteliai",
-            image: "../public/assets/images/pultelis.png",
+            path: "/priedai/raktai-pulteliai",
+            image: raktaiPulteliai,
           },
           {
             title: "Rėlės",
-            path: "/kategorijos/priedai/reles",
-            image: "../public/assets/images/reles.jpeg",
+            path: "/priedai/reles",
+            image: reles,
           },
           {
             title: "Elektromagnetai",
-            path: "/kategorijos/priedai/elektromagnetai",
-            image: "../public/assets/images/elektromagnetas.png",
+            path: "/priedai/elektromagnetai",
+            image: elektromagnetai,
           },
           {
             title: "Elektrosklendės",
-            path: "/kategorijos/priedai/elektroskelndes",
-            image: "../public/assets/images/elektrosklende.jpeg",
+            path: "/priedai/elektroskelndes",
+            image: elektroSklendes,
           },
         ],
       },
       {
         title: "Spynos",
-        path: "/kategorijos/spynos",
+        key: SUBNAV.SPYNOS,
+        path: "/spynos",
         subNavNested: [
           {
             title: "Kodinės dėžutės",
-            path: "/kategorijos/spynos/kodines-dezutes",
-            image: "../public/assets/images/kodineDezute.jpeg",
+            path: "/spynos/kodines-dezutes",
+            image: kodinesDezutes,
           },
           {
             title: "Išmaniosios spynos",
-            path: "/kategorijos/spynos/ismaniosios-spynos",
-            image: "../public/assets/images/ismaniojiSpyna.png",
+            path: "/spynos/ismaniosios-spynos",
+            image: ismaniosiosSpynos,
           },
           {
             title: "Elektrinės spynos",
-            path: "/kategorijos/spynos/elektrines-spynos",
-            image: "../public/assets/images/elektrineSpyna.jpeg",
+            path: "/spynos/elektrines-spynos",
+            image: elektrinesSpynos,
           },
           {
             title: "Mechaninės spynos",
-            path: "/kategorijos/spynos/mechanines-spynos",
-            image: "../public/assets/images/mechanineSpyna.png",
+            path: "/spynos/mechanines-spynos",
+            image: mechaninesSpynos,
           },
         ],
       },
       {
         title: "Jutikliai ir Apsaugos įranga",
-        path: "/kategorijos/jutikliai-apsaugos-iranga",
+        key: SUBNAV.JUTIKLIAI_APSAUGOS_IRANGA,
+        path: "/jutikliai-apsaugos-iranga",
         subNavNested: [
           {
             title: "Daugiafunkciniai jutikliai",
-            path: "/kategorijos/jutikliai-apsaugos-iranga/daugiafunkciniai-jutikliai",
-            image: "/public/assets/images/daugiafunkcinisJutiklis.jpeg",
+            path: "/jutikliai-apsaugos-iranga/daugiafunkciniai-jutikliai",
+            image: daugiafunkciniaiJutikliai,
           },
           {
             title: "Anglies monoksido jutikliai",
-            path: "/kategorijos/jutikliai-apsaugos-iranga/anglies-monoksido-jutikliai",
-            image: "/public/assets/images/angliemonoksidoJutiklis.jpeg",
+            path: "/jutikliai-apsaugos-iranga/anglies-monoksido-jutikliai",
+            image: angliesMonoksidoJutikliai,
           },
           {
             title: "Dujų jutikliai",
-            path: "/kategorijos/jutikliai-apsaugos-iranga/duju-jutikliai",
-            image: "/public/assets/images/dujuJutikliai.jpeg",
+            path: "/jutikliai-apsaugos-iranga/duju-jutikliai",
+            image: dujuJutikliai,
           },
           {
             title: "Dūmų jutikliai",
-            path: "/kategorijos/jutikliai-apsaugos-iranga/dumu-jutikliai",
-            image: "/public/assets/images/dumuJutiklis.jpeg",
+            path: "/jutikliai-apsaugos-iranga/dumu-jutikliai",
+            image: dumuJutikliai,
           },
           {
             title: "Cigarečių dūmų jutikliai",
-            path: "/kategorijos/jutikliai-apsaugos-iranga/cigareciu-dumu-jutikliai",
-            image: "/public/assets/images/cigareciuJutikliai.jpeg",
+            path: "/jutikliai-apsaugos-iranga/cigareciu-dumu-jutikliai",
+            image: cigareciuDumuJutikliai,
           },
           {
             title: "Signalizacijos",
-            path: "/kategorijos/jutikliai-apsaugos-iranga/signalizacijos",
-            image: "/public/assets/images/signalizacija.jpeg",
+            path: "/jutikliai-apsaugos-iranga/signalizacijos",
+            image: signalizacijos,
           },
         ],
       },
       {
         title: "Vaizdo stebėjimo sistemos",
-        path: "/kategorijos/vaizdo-stebejimo-sistemos",
+        key: SUBNAV.VAIZDO_STEBEJIMO_SISTEMOS,
+        path: "/vaizdo-stebejimo-sistemos",
         subNavNested: [
           {
             title: "Mašinos numerių nuskaitymas",
-            path: "/kategorijos/vaizdo-stebejimo-sistemos/masinos-numeriu-nuskaitymas",
-            image: "/public/assets/images/masinosNumeriuNuskaitymas.png",
+            path: "/vaizdo-stebejimo-sistemos/masinos-numeriu-nuskaitymas",
+            image: masinosNumeriuNuskaitymas,
           },
           {
             title: "NVR įrenginiai",
-            path: "/kategorijos/vaizdo-stebejimo-sistemos/nvr-irenginiai",
-            image: "/public/assets/images/nvrIrenginiai.jpeg",
+            path: "/vaizdo-stebejimo-sistemos/nvr-irenginiai",
+            image: nvrIrenginiai,
           },
         ],
       },
@@ -235,15 +307,29 @@ export const sidebarData: SideBarType[] = [
     subNav: [
       {
         title: "Telefonspynių remontas",
+        key: SUBNAV.TELEFONSPYNIU_REMONTAS,
         path: "/paslaugos/telefonspyniu-remontas",
       },
-      { title: "Spynų remontas", path: "/paslaugos/spynu-remontas" },
-      { title: "Durų remontas", path: "/paslaugos/duru-remontas" },
+      {
+        title: "Spynų remontas",
+        key: SUBNAV.SPYNU_REMONTAS,
+        path: "/paslaugos/spynu-remontas",
+      },
+      {
+        title: "Durų remontas",
+        key: SUBNAV.DURU_REMONTAS,
+        path: "/paslaugos/duru-remontas",
+      },
       {
         title: "Mechaninių raktų, el. raktų ir vartų pultelių kopijavimas",
+        key: SUBNAV.KOPIJAVIMAS,
         path: "/paslaugos/kopijavimas",
       },
-      { title: "Suvirintojo paslaugos", path: "/paslaugos/suvirinimas" },
+      {
+        title: "Suvirintojo paslaugos",
+        key: SUBNAV.SUVIRINTOJO_PASLAUGOS,
+        path: "/paslaugos/suvirinimas",
+      },
     ],
   },
   { title: "Apie mus", key: SIDEBAR.APIE_MUS, path: "/apie-mus" },

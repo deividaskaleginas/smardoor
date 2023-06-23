@@ -1,1 +1,1 @@
-.header{position:fixed;top:0;left:0;right:0;display:flex;justify-content:center;background-color:var(--white)}.header__headerBlock{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:70rem;padding:1rem 2rem}/*# sourceMappingURL=header.css.map */
+.header{position:fixed;top:0;left:0;right:0;z-index:99;display:flex;justify-content:center;background-color:var(--dark)}.header__headerBlock{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:70rem;padding:1rem 2rem}/*# sourceMappingURL=header.css.map */

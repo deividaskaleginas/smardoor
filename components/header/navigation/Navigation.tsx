@@ -22,44 +22,46 @@ export const Navigation: React.FC = () => {
     <nav className="navigation">
       <ul className="navigation__list">
         {sidebarData.map(({ title, path, key, subNav }, index) => {
-          return (
-            <div
-              className="navigation__list__itemBlock"
-              key={index}
-              onMouseEnter={() =>
-                setActiveNavs({
-                  ...activeNavs,
-                  [key]: !activeNavs[key],
-                })
-              }
-              onMouseLeave={() =>
-                setActiveNavs({
-                  ...activeNavs,
-                  [key]: !activeNavs[key],
-                })
-              }
-            >
-              <Link className="navigation__list__itemBlock__item" href={path}>
-                {title}
-              </Link>
+          if (key !== SIDEBAR.PREKES) {
+            return (
+              <div
+                className="navigation__list__itemBlock"
+                key={index}
+                onMouseEnter={() =>
+                  setActiveNavs({
+                    ...activeNavs,
+                    [key]: !activeNavs[key],
+                  })
+                }
+                onMouseLeave={() =>
+                  setActiveNavs({
+                    ...activeNavs,
+                    [key]: !activeNavs[key],
+                  })
+                }
+              >
+                <Link className="navigation__list__itemBlock__item" href={path}>
+                  {title}
+                </Link>
 
-              {activeNavs[key] && subNav && (
-                <ul className="navigation__list__itemBlock__subNav">
-                  {subNav?.map(({ title, path }, index) => {
-                    return (
-                      <Link
-                        key={index}
-                        href={path}
-                        className="navigation__list__itemBlock__subNav__listItem"
-                      >
-                        {title}
-                      </Link>
-                    );
-                  })}
-                </ul>
-              )}
-            </div>
-          );
+                {activeNavs[key] && subNav && (
+                  <ul className="navigation__list__itemBlock__subNav">
+                    {subNav?.map(({ title, path }, index) => {
+                      return (
+                        <Link
+                          key={index}
+                          href={path}
+                          className="navigation__list__itemBlock__subNav__listItem"
+                        >
+                          {title}
+                        </Link>
+                      );
+                    })}
+                  </ul>
+                )}
+              </div>
+            );
+          }
         })}
       </ul>
       <div className="navigation__contacts">

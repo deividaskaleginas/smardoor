@@ -1,11 +1,14 @@
 import { Header } from "@/components/header/Header";
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Main } from "@/components/main/Main";
+import { LogosSection } from "@/components/sections/logos/LogosSection";
+import { ServisesSection } from "@/components/sections/servises/ServisesSection";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-    </>
+    <main>
+      <Main />
+      <ServisesSection />
+      <LogosSection />
+    </main>
   );
 }

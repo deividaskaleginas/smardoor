@@ -1,0 +1,21 @@
+@use "../../styles//utils/" as u;
+
+.swiperBlock {
+  max-width: 26rem;
+  padding: 2rem;
+
+  @include u.breakpoint(tablet) {
+    max-width: 51.25rem;
+  }
+
+  &__imageWrapper {
+    display: flex;
+    align-items: center;
+    &__image {
+      object-fit: contain;
+      width: 100%;
+      position: relative;
+      height: unset;
+    }
+  }
+}

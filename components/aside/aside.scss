@@ -1,0 +1,72 @@
+@use "../../styles//utils/" as u;
+
+.aside {
+  @include u.breakpoint-down(tabletXL) {
+    display: none;
+  }
+  width: 18.75rem;
+  &__navigation {
+    &__list {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      &__block {
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        &__itemBlock {
+          &__item {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--black);
+          }
+          &__item:hover {
+            color: var(--primary);
+          }
+        }
+
+        &__subNavNested {
+          position: absolute;
+
+          top: 0;
+          left: 18.75rem;
+          z-index: 20;
+          height: 100%;
+          width: 51.25rem;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          background-color: var(--white);
+          &__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 1rem;
+            padding: 0.5rem;
+
+            &__block {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              transition: transform 0.2s;
+
+              &__item {
+                color: var(--lightDark);
+              }
+              &__item:hover {
+                font-weight: 500;
+                color: var(--black);
+              }
+            }
+            &__block:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

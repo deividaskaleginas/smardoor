@@ -1,0 +1,17 @@
+@use "../../../styles//utils/" as u;
+
+.logoSection {
+  display: flex;
+  justify-content: center;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 70rem;
+    margin: 2rem;
+
+    @include u.breakpoint(laptop) {
+      flex-direction: row;
+    }
+  }
+}

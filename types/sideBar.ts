@@ -1,14 +1,16 @@
-import { SIDEBAR } from "@/constants/sideBarData";
+import { SIDEBAR, SUBNAV } from "@/constants/sideBarData";
+import { StaticImageData } from "next/image";
 
 export type SubNavNestedType = {
   title: string;
   path: string;
-  image: string;
+  image: StaticImageData;
 };
 
 export type SubNavType = {
   title: string;
   path: string;
+  key: SUBNAV;
   subNavNested?: SubNavNestedType[];
 };
 
