@@ -5,7 +5,7 @@
   justify-content: center;
   background-color: var(--dark);
 
-  &__container {
+  .wrapper {
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
@@ -15,73 +15,65 @@
       display: grid;
       grid-template-columns: 2fr 1.2fr 2fr;
     }
-    &__about {
+    .about {
       display: flex;
       flex-direction: column;
       padding: 1rem 2rem;
 
-      &__image {
-        height: 4rem;
-        width: fit-content;
-      }
-
-      &__paragraph {
+      .paragraph {
         font-size: 1.2rem;
         line-height: 1.4rem;
         color: var(--white);
       }
     }
 
-    &__menu {
+    .menu {
       padding: 1rem 2rem;
-      &__title {
+      .title {
         font-size: 1.4rem;
         margin: 0;
         color: var(--white);
       }
-      &__list {
+      .list {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
         padding: 0 1rem;
 
-        &__item {
+        .item {
           color: var(--white);
         }
-        &__item:hover {
+        .item:hover {
           color: var(--primary);
         }
       }
     }
 
-    &__contacts {
+    .contacts {
       padding: 1rem 2rem;
-      &__title {
+      .title {
         font-size: 1.4rem;
         margin: 0;
         color: var(--white);
       }
-      &__data {
+      .data {
         padding-top: 1rem;
-        &__name {
+        .name {
           font-size: 1.2rem;
           margin-top: 1rem;
           padding: 1rem;
           color: var(--white);
         }
-        &__list {
+        .list {
           padding: 0 1rem;
 
-          &__item {
+          .item {
             display: flex;
             align-items: center;
             gap: 1rem;
             list-style: none;
             font-size: 1.1rem;
             color: var(--white);
-          }
-          &__icon {
-            height: 3rem;
           }
         }
       }

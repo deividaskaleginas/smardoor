@@ -32,7 +32,6 @@ export const Aside: React.FC = () => {
       return data;
     }
   });
-  console.log(prekes);
   return (
     <aside className={styles.aside}>
       <nav className={styles.navigation}>
