@@ -1,16 +1,24 @@
 import React from "react";
 
-import "./burger.scss";
+import styles from "./Burger.module.scss";
 
 interface BurgerProps {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const Burger: React.FC<BurgerProps> = ({ open, setOpen }) => (
-  <div className="burger" role="button" onClick={() => setOpen(!open)}>
-    <div className={open ? "burger__line --active" : "burger__line"}></div>
-    <div className={open ? "burger__line --active" : "burger__line"}></div>
-    <div className={open ? "burger__line --active" : "burger__line"}></div>
-  </div>
-);
+export const Burger: React.FC<BurgerProps> = ({ open, setOpen }) => {
+  const handleClick = () => {
+    setOpen((prev) => !prev);
+  };
+
+  const lineClassName = `${styles.line} ${open ? styles.active : ""}`;
+
+  return (
+    <div className={styles.burger} role="button" onClick={handleClick}>
+      <div className={lineClassName}></div>
+      <div className={lineClassName}></div>
+      <div className={lineClassName}></div>
+    </div>
+  );
+};

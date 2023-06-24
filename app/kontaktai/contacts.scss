@@ -8,6 +8,7 @@
   &__container {
     max-width: 70rem;
     padding: 2rem;
+
     &__dataBlock {
       @include u.breakpoint(laptop) {
         display: flex;

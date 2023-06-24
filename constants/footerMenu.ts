@@ -5,19 +5,21 @@ import calendar from "../public/assets/icons/calendar.svg";
 import clock from "../public/assets/icons/alarm.svg";
 import phone from "../public/assets/icons/phone-fill.svg";
 import email from "../public/assets/icons/envelope-plus.svg";
+import { Routes } from "@/types/routes";
 
 export const footerMenuLinks: FooterLinksType[] = [
+  // TODO: create Routes enum for the Routes
   {
     title: "Visi produktai",
-    href: "/kategorijos",
+    href: Routes.KATEGORIJOS,
   },
   {
     title: "Prekių gražinimas",
-    href: "/prekiu-grazinimas",
+    href: Routes.PREKIU_GRAZINIMAS,
   },
   {
     title: "Kontaktai",
-    href: "/kontaktai",
+    href: Routes.KONTAKTAI,
   },
   {
     title: "Apie mus",

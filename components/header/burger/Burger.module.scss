@@ -7,20 +7,18 @@
   width: 3rem;
   height: 2rem;
 
-  &__line {
+  .line {
     width: 3rem;
     height: 0.12rem;
     border-radius: 0.625rem;
     transition: all 0.3s linear;
     background-color: var(--white);
-  }
-  &__line.--active {
-    &:nth-child(1) {
-      transform: translateX(-5px);
-    }
 
-    &:nth-child(3) {
-      transform: translateX(-5px);
+    &.active {
+      &:nth-child(1),
+      &:nth-child(3) {
+        transform: translateX(-5px);
+      }
     }
   }
 
