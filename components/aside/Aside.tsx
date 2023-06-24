@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 import chevronRight from "../../public/assets/icons/chevron-right.svg";
 
-import "./aside.scss";
+import styles from "./Aside.module.scss";
 
 export const Aside: React.FC = () => {
   const [activeSubNavs, setActiveSubNavs] = useState<{
@@ -34,10 +34,10 @@ export const Aside: React.FC = () => {
   });
   console.log(prekes);
   return (
-    <aside className="aside">
-      <nav className="aside__navigation">
+    <aside className={styles.aside}>
+      <nav className={styles.navigation}>
         {prekes.map(({ subNav }, index) => (
-          <ul key={index} className="aside__navigation__list">
+          <ul key={index} className={styles.list}>
             {subNav?.map(({ title, path, key, subNavNested }, index) => (
               <div
                 key={index}
@@ -53,13 +53,10 @@ export const Aside: React.FC = () => {
                     [key]: !activeSubNavs[key],
                   })
                 }
-                className="aside__navigation__list__block"
+                className={styles.block}
               >
-                <div className="aside__navigation__list__block__itemBlock">
-                  <Link
-                    className="aside__navigation__list__block__itemBlock__item"
-                    href={path}
-                  >
+                <div className={styles.itemBlock}>
+                  <Link className={styles.item} href={path}>
                     {title}{" "}
                     {subNavNested && (
                       <Image src={chevronRight} alt="rodyklės į dešinę ikona" />
@@ -68,23 +65,20 @@ export const Aside: React.FC = () => {
                 </div>
 
                 {activeSubNavs[key] && subNavNested && (
-                  <div className="aside__navigation__list__block__subNavNested">
-                    <ul className="aside__navigation__list__block__subNavNested__list">
+                  <div className={styles.subNavNested}>
+                    <ul className={styles.list}>
                       {subNavNested.map(({ title, path, image }, index) => (
-                        <div
-                          key={index}
-                          className="aside__navigation__list__block__subNavNested__list__block"
-                        >
-                          <Image
-                            src={image}
-                            alt="test"
-                            height={78}
-                            width={78}
-                          />
-                          <Link
-                            href={path}
-                            className="aside__navigation__list__block__subNavNested__list__block__item"
-                          >
+                        <div key={index} className={styles.block}>
+                          {image && (
+                            <Image
+                              src={image}
+                              alt="test"
+                              height={78}
+                              width={78}
+                            />
+                          )}
+
+                          <Link href={path} className={styles.item}>
                             {title}
                           </Link>
                         </div>
