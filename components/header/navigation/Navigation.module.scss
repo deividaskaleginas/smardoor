@@ -8,13 +8,13 @@
   display: flex;
   gap: 2rem;
 
-  &__list {
+  .list {
     display: flex;
     gap: 1rem;
 
-    &__itemBlock {
+    .itemBlock {
       position: relative;
-      &__item {
+      .item {
         display: block;
         font-size: 1.2rem;
         font-weight: 600;
@@ -22,11 +22,11 @@
         color: var(--white);
       }
 
-      &__item:hover {
+      .item:hover {
         color: var(--primary);
       }
 
-      &__subNav {
+      .subNav {
         position: absolute;
         z-index: 1;
         display: flex;
@@ -36,28 +36,28 @@
         padding: 2rem 1rem 1rem 1rem;
         background-color: var(--dark);
 
-        &__listItem {
+        .listItem {
           font-size: 1.2rem;
           font-weight: 500;
           color: var(--white);
         }
-        &__listItem:hover {
+        .listItem:hover {
           color: var(--primary);
         }
       }
     }
   }
 
-  &__contacts {
+  .contacts {
     display: flex;
     gap: 1rem;
 
-    &__block {
+    .block {
       display: flex;
       align-items: center;
       gap: 0.5rem;
 
-      &__link {
+      .link {
         color: var(--primary);
       }
     }

@@ -4,7 +4,7 @@ import { SIDEBAR, sidebarData } from "@/constants/sideBarData";
 import Link from "next/link";
 import React, { useState } from "react";
 
-import "./navigation.scss";
+import styles from "./Navigation.module.scss";
 
 import phone from "../../../public/assets/icons/telephone-fill.svg";
 import envelope from "../../../public/assets/icons/envelope-fill.svg";
@@ -19,13 +19,13 @@ export const Navigation: React.FC = () => {
     [SIDEBAR.KATALOGAI]: false,
   });
   return (
-    <nav className="navigation">
-      <ul className="navigation__list">
+    <nav className={styles.navigation}>
+      <ul className={styles.list}>
         {sidebarData.map(({ title, path, key, subNav }, index) => {
           if (key !== SIDEBAR.PREKES) {
             return (
               <div
-                className="navigation__list__itemBlock"
+                className={styles.itemBlock}
                 key={index}
                 onMouseEnter={() =>
                   setActiveNavs({
@@ -40,18 +40,14 @@ export const Navigation: React.FC = () => {
                   })
                 }
               >
-                <Link className="navigation__list__itemBlock__item" href={path}>
+                <Link className={styles.item} href={path}>
                   {title}
                 </Link>
 
                 {activeNavs[key] && subNav && (
-                  <ul className="navigation__list__itemBlock__subNav">
+                  <ul className={styles.subNav}>
                     {subNav?.map(({ title, path }, index) => (
-                      <Link
-                        key={index}
-                        href={path}
-                        className="navigation__list__itemBlock__subNav__listItem"
-                      >
+                      <Link key={index} href={path} className={styles.listItem}>
                         {title}
                       </Link>
                     ))}
@@ -62,22 +58,16 @@ export const Navigation: React.FC = () => {
           }
         })}
       </ul>
-      <div className="navigation__contacts">
-        <div className="navigation__contacts__block">
+      <div className={styles.contacts}>
+        <div className={styles.block}>
           <Image src={phone} alt={"phone icon"} height={16} width={16} />
-          <a
-            className="navigation__contacts__block__link"
-            href="tel: +37068444099"
-          >
+          <a className={styles.link} href="tel: +37068444099">
             +370 684 44099
           </a>
         </div>
-        <div className="navigation__contacts__block">
+        <div className={styles.block}>
           <Image src={envelope} alt="envelope icon" height={16} width={16} />
-          <a
-            className="navigation__contacts__block__link"
-            href="mailto: info@cargolita.lt"
-          >
+          <a className={styles.link} href="mailto: info@cargolita.lt">
             info@cargolita.lt
           </a>
         </div>

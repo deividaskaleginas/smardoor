@@ -3,7 +3,6 @@
   top: 0;
   right: 0;
   left: 100%;
-  // opacity: 1;
   z-index: 2;
   overflow-y: visible;
   overflow-x: hidden;
@@ -11,10 +10,10 @@
   width: 100%;
   background-color: var(--white);
 
-  &__container {
+  .wrapper {
     width: 100%;
 
-    &__top {
+    .top {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -22,9 +21,9 @@
       background-color: var(--dark);
     }
 
-    &__navigation {
+    .navigation {
       padding: 0 2rem;
-      &__unorderList {
+      .unorderList {
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -32,55 +31,55 @@
         padding: 2rem 0;
         border-bottom: 1px solid var(--grey);
 
-        &__block {
+        .block {
           display: flex;
           flex-direction: column;
 
-          &__categoryTitle {
+          .categoryTitle {
             display: flex;
             align-items: center;
             justify-content: space-between;
 
-            &__listItem {
+            .listItem {
               font-size: 1.3rem;
               font-weight: 600;
               color: var(--black);
             }
 
-            &__icon {
+            .icon {
               transform: rotate(0deg);
               transition: 0.3s ease-in-out 0s;
             }
 
-            &__icon.--active {
+            .icon.active {
               transform: rotate(-180deg);
             }
           }
 
-          &__subNav {
+          .subNav {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
             padding: 0.8rem 2rem;
 
-            &__listItem {
+            .listItem {
               font-size: 1.2rem;
               color: var(--lightBlack);
             }
           }
         }
       }
-      &__contactsBlock {
+      .contactsBlock {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         padding-top: 2rem;
 
-        &__contactBlock {
+        .contactBlock {
           display: flex;
           gap: 1rem;
 
-          &__link {
+          .link {
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--black);
@@ -91,7 +90,7 @@
   }
 }
 
-.sideBar.--active {
+.sideBar.active {
   display: flex;
   left: 0;
   --webkit-transtition: all 0.4s ease-in;
