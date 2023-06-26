@@ -1,0 +1,1 @@
+.logoSection{display:flex;justify-content:center}.logoSection .wrapper{display:flex;flex-direction:column;gap:2rem;max-width:70rem;margin:2rem}@media(min-width: 64rem){.logoSection .wrapper{flex-direction:row}}/*# sourceMappingURL=LogoSection.module.css.map */

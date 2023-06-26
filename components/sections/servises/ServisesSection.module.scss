@@ -3,7 +3,7 @@
 .servises {
   display: flex;
   justify-content: center;
-  &__container {
+  .wrapper {
     max-width: 70rem;
     padding: 2rem;
     display: grid;
@@ -13,7 +13,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
 
-    &__servis {
+    .servis {
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -22,19 +22,19 @@
       border-radius: 5px;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
-      &__title {
+      .title {
         text-align: center;
         margin: 0 1rem;
         padding: 2rem;
         border-bottom: 5px solid var(--primary);
       }
 
-      &__paragraph {
+      .paragraph {
         text-align: center;
       }
     }
 
-    &__servis:hover {
+    .servis:hover {
       transform: scale(1.2);
     }
   }

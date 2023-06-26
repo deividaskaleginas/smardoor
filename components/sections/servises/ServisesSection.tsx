@@ -1,19 +1,16 @@
 import { ServisesSectionData } from "@/constants/servisesSection";
-import Image from "next/image";
 import React from "react";
 
-import "./servisesSection.scss";
+import styles from "./ServisesSection.module.scss";
 
 export const ServisesSection: React.FC = () => (
-  <section className="servises">
-    <div className="servises__container">
+  <section className={styles.servises}>
+    <div className={styles.wrapper}>
       {ServisesSectionData.map(({ title, description }, index) => {
         return (
-          <div key={index} className="servises__container__servis">
-            <h3 className="servises__container__servis__title">{title}</h3>
-            <p className="servises__container__servis__paragraph">
-              {description}
-            </p>
+          <div key={index} className={styles.servis}>
+            <h3 className={styles.title}>{title}</h3>
+            <p className={styles.paragraph}>{description}</p>
           </div>
         );
       })}
