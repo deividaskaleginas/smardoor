@@ -2,11 +2,11 @@ import React from "react";
 import { Aside } from "../aside/Aside";
 import { HeroSection } from "../sections/hero/HeroSection";
 
-import "./main.scss";
+import styles from "./Main.module.scss";
 
 export const Main: React.FC = () => (
-  <div className="main">
-    <div className="main__container">
+  <div className={styles.main}>
+    <div className={styles.wrapper}>
       <Aside />
       <HeroSection />
     </div>
