@@ -1,12 +1,12 @@
 import { ServisesSection } from "@/components/sections/servises/ServisesSection";
 
-import "./paslaugos.scss";
+import styles from "./Paslaugos.module.scss";
 
 export default function Page() {
   return (
-    <main className="servisesPage">
-      <div className="servisesPage__container">
-        <h1 className="servisesPage__container__title">Paslaugos</h1>
+    <main className={styles.servisesPage}>
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>Paslaugos</h1>
         <ServisesSection />
       </div>
     </main>
