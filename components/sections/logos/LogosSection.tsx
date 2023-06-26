@@ -2,13 +2,13 @@ import { LogoSectionData } from "@/constants/logoSection";
 import Image from "next/image";
 import React from "react";
 
-import "./logoSection.scss";
+import styles from "./LogoSection.module.scss";
 
 export const LogosSection: React.FC = () => (
-  <section className="logoSection">
-    <div className="logoSection__container">
+  <section className={styles.logoSection}>
+    <div className={styles.wrapper}>
       {LogoSectionData.map(({ image, alt }, index) => (
-        <div key={index} className="logoSection__container__logo">
+        <div key={index}>
           <Image src={image} alt={alt} />
         </div>
       ))}
