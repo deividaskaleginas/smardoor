@@ -341,12 +341,12 @@ export const sidebarData: SideBarType[] = [
       {
         title: "Mechaninių raktų, el. raktų ir vartų pultelių kopijavimas",
         key: SUBNAV.KOPIJAVIMAS,
-        path: "/paslaugos/kopijavimas",
+        path: "/paslaugos/telefonspynes-raktu-kopijavimas",
       },
       {
         title: "Suvirintojo paslaugos",
         key: SUBNAV.SUVIRINTOJO_PASLAUGOS,
-        path: "/paslaugos/suvirinimas",
+        path: "/paslaugos/suvirintojo-paslaugos",
       },
     ],
   },

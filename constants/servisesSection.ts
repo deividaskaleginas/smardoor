@@ -287,3 +287,34 @@ export const DuruRemontasData = [
     description: "Angokraščių tinkavimas po durų sumontavimo",
   },
 ];
+
+export const SuvirintojoPaslaugosData = [
+  {
+    icon: checkMark,
+    description: "Mobilaus suvirintojo paslauga",
+  },
+  {
+    icon: checkMark,
+    description: "Metlalinių durų lankstų virinimas",
+  },
+  {
+    icon: checkMark,
+    description: "Turėklų virinimas",
+  },
+  {
+    icon: checkMark,
+    description: "Vartų ir vartelių konstrukcijų remontas, virinimas",
+  },
+  {
+    icon: checkMark,
+    description: "Tvirtinimo elementų virinimas",
+  },
+  {
+    icon: checkMark,
+    description: "Spynos montavimo „dėžutės“ gamyba",
+  },
+  {
+    icon: checkMark,
+    description: "Smulkūs suvirinimo darbai",
+  },
+];
