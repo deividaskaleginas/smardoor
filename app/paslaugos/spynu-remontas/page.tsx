@@ -1,3 +1,4 @@
+import { Contacts } from "@/components/contacts/Contacts";
 import { SpynuRemontasData } from "@/constants/servisesSection";
 import Image from "next/image";
 import styles from "./SpynuRemontas.module.scss";
@@ -22,6 +23,7 @@ export default function Page() {
             </li>
           ))}
         </ul>
+        <Contacts />
       </div>
     </main>
   );

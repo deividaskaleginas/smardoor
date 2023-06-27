@@ -231,3 +231,59 @@ export const SpynuRemontasData = [
     description: "Spynos apsaugos padidinimas",
   },
 ];
+
+export const DuruRemontasData = [
+  {
+    icon: checkMark,
+    description:
+      "Metalinių (šarvuotų ), PVC, aliumininių, stiklo durų remontas",
+  },
+  {
+    icon: checkMark,
+    description: "Spynų montavimas ir keitimas",
+  },
+  {
+    icon: checkMark,
+    description: "Apdailos plokščių keitimas ir remontas",
+  },
+  {
+    icon: checkMark,
+    description: "Durų montavimas, perkėlimas",
+  },
+  {
+    icon: checkMark,
+    description: "Durų angos praplatinimas",
+  },
+  {
+    icon: checkMark,
+    description: "Suvirinimo darbai ( lankstų, rėmo … )",
+  },
+  {
+    icon: checkMark,
+    description: "Pritraukėjų montavimas, remontas, keitimas",
+  },
+  {
+    icon: checkMark,
+    description: "Elektromechaninių spynų montavimas",
+  },
+  {
+    icon: checkMark,
+    description: "Durų atnaujinimas – dažymas, tarpinių keitimas, apšiltinimas",
+  },
+  {
+    icon: checkMark,
+    description: "Stiklo paketų keitimas",
+  },
+  {
+    icon: checkMark,
+    description: "Ribotuvų montavimas",
+  },
+  {
+    icon: checkMark,
+    description: "Apdailos, apvadų parinkimas ir montavimas",
+  },
+  {
+    icon: checkMark,
+    description: "Angokraščių tinkavimas po durų sumontavimo",
+  },
+];

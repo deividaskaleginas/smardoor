@@ -1,4 +1,6 @@
-.spynuRemontas {
+@use "../../../styles//utils/" as u;
+
+.duruRemontas {
   display: flex;
   justify-content: center;
   margin-top: 6rem;
@@ -6,9 +8,11 @@
   .wrapper {
     max-width: 70rem;
     padding: 2rem;
-    .paragraph {
-      text-align: justify;
+
+    @include u.breakpoint(laptop) {
+      width: 70rem;
     }
+
     .list {
       list-style: none;
       display: flex;
@@ -20,6 +24,14 @@
         display: flex;
         gap: 0.2rem;
         font-weight: 500;
+      }
+    }
+    .paragraph {
+      text-align: justify;
+      font-weight: 700;
+
+      @include u.breakpoint(laptop) {
+        text-align: center;
       }
     }
   }
