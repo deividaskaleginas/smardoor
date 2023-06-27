@@ -1,0 +1,26 @@
+.spynuRemontas {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+
+  .wrapper {
+    max-width: 70rem;
+    padding: 1rem 1rem 2rem 2rem;
+    .paragraph {
+      text-align: justify;
+    }
+    .list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0;
+
+      .item {
+        display: flex;
+        gap: 0.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

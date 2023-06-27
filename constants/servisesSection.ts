@@ -1,5 +1,7 @@
 import { ServisesType } from "@/types/servisesType";
 
+import checkMark from "../public/assets/icons/check.svg";
+
 //Cyfral
 import cyfralCCD2094M from "../public/assets/images/telefonspynes/CYFRAL-CCD2094.jpg";
 import cyfralCCD2094 from "../public/assets/images/telefonspynes/CYFRAL-CCD2094.jpeg";
@@ -183,5 +185,49 @@ export const TelefonspynesModelsData = [
     alt: "Telefonspynė `DD5000`",
     brand: "DD5000",
     model: "DD5000",
+  },
+];
+
+export const SpynuRemontasData = [
+  {
+    icon: checkMark,
+    description: "Avarinis spynų atrakinimas",
+  },
+  {
+    icon: checkMark,
+    description: "Spynų montavimas į visų rūšių duris, vartus, garažų vartus",
+  },
+  {
+    icon: checkMark,
+    description: "Spynų perkodavimas ir cilindrų keitimas",
+  },
+  {
+    icon: checkMark,
+    description: "Cilindrų restauracija",
+  },
+  {
+    icon: checkMark,
+    description: "Rankenų remontas ir keitimas",
+  },
+  {
+    icon: checkMark,
+    description: "Sisteminių cilindrų gamyba",
+  },
+  {
+    icon: checkMark,
+    description: "Elektromagnetų ir sklendžių montavimas",
+  },
+  {
+    icon: checkMark,
+    description:
+      "Durų pritraukėjų remontas, permontavimas, montavimas, reguliavimas",
+  },
+  {
+    icon: checkMark,
+    description: "Akutės įrengimas",
+  },
+  {
+    icon: checkMark,
+    description: "Spynos apsaugos padidinimas",
   },
 ];
