@@ -1,0 +1,1 @@
+.wrapper{display:flex;flex-direction:column}@media(min-width: 64rem){.wrapper{flex-direction:row;gap:1rem;justify-content:center}}.wrapper .contact{display:flex;align-items:center;gap:1rem}.wrapper .contact .link{font-size:1.4rem;font-weight:600;color:var(--black)}/*# sourceMappingURL=Contacts.module.css.map */
