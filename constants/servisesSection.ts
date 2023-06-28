@@ -29,6 +29,16 @@ import proel2 from "../public/assets/images/telefonspynes/Proel2.png";
 import eltis from "../public/assets/images/telefonspynes/Eltis.png";
 import dd5000 from "../public/assets/images/telefonspynes/DD5000.png";
 
+//Keys
+import ultionKey from "../public/assets/images/sliders/raktas-1.png";
+import key from "../public/assets/images/sliders/raktas.png";
+import key2 from "../public/assets/images/sliders/raktas2.png";
+import motturaKey from "../public/assets/images/sliders/mottura.jpeg";
+import assa2Key from "../public/assets/images/sliders/assa2.jpeg";
+import assaKey from "../public/assets/images/sliders/assa1.jpeg";
+import pultelisRD from "../public/assets/images/sliders/pultelisRD.png";
+import pultelis from "../public/assets/images/sliders/pultelis1.jpeg";
+
 export const ServisesSectionData: ServisesType[] = [
   {
     title: "Telefonspynių remontas",
@@ -317,4 +327,72 @@ export const SuvirintojoPaslaugosData = [
     icon: checkMark,
     description: "Smulkūs suvirinimo darbai",
   },
+];
+
+export const MechaniniuRaktuData = [
+  {
+    description: "Euro ruošinio raktas – 3€ su PVM",
+  },
+  {
+    description: "ASSA ruošinio raktas – 5€ su PVM",
+  },
+  {
+    description: "ASSA ruošinio raktas (12PIN) – 10€ su PVM",
+  },
+  {
+    description: "Seifinio ruošinio raktas – nuo 12€ su PVM",
+  },
+  {
+    description: "Seifinio ruošinio raktas (taškinis) – nuo 12€ su PVM",
+  },
+];
+
+export const TelefonspyniuRaktuData = [
+  {
+    description:
+      "El. rakto kopiją galima pasigaminti atvykus į būstinę arba išsikviečiant meistrą į vietą, rakto pagaminimas užtrunka kelias minutes",
+  },
+  {
+    description:
+      "El. Rakto (TM DALLAS, RFID) kopijos kaina: 3,00 EUR  (su PVM)",
+  },
+  {
+    description: "El. Rakto (MIFARE) kopijos kaina: 5,00 EUR (su PVM)",
+  },
+  {
+    description: "El. Rakto (HID) kopijos kaina: 10,00 EUR (su PVM)",
+  },
+  {
+    description:
+      "Meistro iškvietimas/atvykimas Vilniaus mieste nuo 30,00 EUR + PVM",
+  },
+  {
+    description:
+      "Dublikato pagaminimui reikalingas originalus el. raktas, tai gali būti Jūsų kaimyno el. raktas ar pan.",
+  },
+];
+
+export const VartuPulteliuData = [
+  {
+    description:
+      "Universalūs pulteliai, nekintamo arba kintamo kodo. Į šį pultelį galima įrašyti įvairius pultelius, kurių dažnis 433,92-869 Mhz.",
+  },
+  {
+    description:
+      "Tinka su šitų įmonių produkcija: Came, Proteco, BFT, Daspi, Marantec 433, Liftmaster433.",
+  },
+  {
+    description: "Pultelio kopijos kaina nuo 20 EUR su PVM.",
+  },
+];
+
+export const KeysSwiperData = [
+  { image: ultionKey, alt: "`Ultion` durų spynos raktas" },
+  { image: key, alt: "Durų spynos raktas" },
+  { image: key2, alt: "Durų spynos raktas" },
+  { image: motturaKey, alt: "`Mottura` durų spynos raktas" },
+  { image: assa2Key, alt: "`Assa` durų spynos raktas" },
+  { image: assaKey, alt: "`Assa` durų spynos raktas" },
+  { image: pultelisRD, alt: "`Nuotolinis vartų pultelis" },
+  { image: pultelis, alt: "`Nuotolinis vartų pultelis" },
 ];
