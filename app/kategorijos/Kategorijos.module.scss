@@ -1,0 +1,31 @@
+@use "../../styles//utils/" as u;
+
+.kategorijos {
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  .wrapper {
+    padding: 2rem;
+    max-width: 70rem;
+
+    .wrapperData {
+      display: grid;
+      gap: 2rem;
+
+      @include u.breakpoint(laptop) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        color: var(--black);
+        font-size: 1.2rem;
+        font-weight: 500;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+    }
+  }
+}

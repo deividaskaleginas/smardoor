@@ -14,7 +14,7 @@ export const footerMenuLinks: FooterLinksType[] = [
     href: Routes.KATEGORIJOS,
   },
   {
-    title: "Prekių gražinimas",
+    title: "Prekių grąžinimas",
     href: Routes.PREKIU_GRAZINIMAS,
   },
   {
@@ -38,7 +38,7 @@ export const footerContactsData: FooterContactsType[] = [
   {
     icon: geoIcon,
     alt: "Lokacijos ikona",
-    data: "Fabijoniškių g. 99-1, Vilnius",
+    data: "Fabijoniškių g. 99-1 aukštas, Vilnius",
   },
   {
     icon: calendar,

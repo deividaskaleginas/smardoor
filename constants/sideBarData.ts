@@ -50,6 +50,7 @@ import nvrIrenginiai from "../public/assets/images/nvrIrenginiai.jpeg";
 //Kategorijos
 import telefonspyne from "../public/assets/images/categories/telefonspyne.jpeg";
 import markizes from "../public/assets/images/categories/markize.jpeg";
+import kelioBarjeras from "../public/assets/images/kelioBarjeras.jpeg";
 
 export enum SIDEBAR {
   PREKES = "prekes",
@@ -138,7 +139,7 @@ export const sidebarData: SideBarType[] = [
         title: "Vartų automatika",
         key: SUBNAV.VARTU_AUTOMATIKA,
         path: "/vartu-automatika",
-        image: kelioBarjerai,
+        image: kelioBarjeras,
         alt: "Pakeliamo kelio barjero nuotrauka",
         subNavNested: [
           {
