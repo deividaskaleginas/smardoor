@@ -1,16 +1,26 @@
 "use client";
 
+import axios from "axios";
 import React, { FormEvent, useState } from "react";
+
+import styles from "./AddCategory.module.scss";
 
 export const AddCategory: React.FC = () => {
   const [image, setImage] = useState<File>();
   const [categoryValues, setCategoryValues] = useState({
     title: "",
     alt: "",
+    href: "",
+    categoryKey: "",
   });
 
+  const formData = new FormData();
+  if (image) {
+    formData.append("image", image);
+  }
+
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCategoryValues({ ...categoryValues, [e.target.name]: e.target.value });
+    setCategoryValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,16 +29,39 @@ export const AddCategory: React.FC = () => {
     setImage(selectedFile?.[0]);
   };
 
-  const handleSubmit = (e: FormEvent) => {};
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("title", categoryValues.title);
+    if (image) {
+      formData.append("image", image);
+    }
+    formData.append("alt", categoryValues.alt);
+    formData.append("href", categoryValues.href);
+    formData.append("categoryKey", categoryValues.categoryKey);
+
+    try {
+      await axios.post("http://localhost:8080/kategorijos", formData);
+      window.location.reload;
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
-    <main>
-      <form>
+    <div>
+      <h3>Pridėti kategoriją:</h3>
+      <form
+        encType="multipart/form-data"
+        onSubmit={handleSubmit}
+        className={styles.form}
+      >
         <input
           type="text"
           id="titleInput"
           name="title"
-          placeholder="Kategorijos pavadinimas"
+          placeholder="Kategorijos pavadinimas. Pvz.: Telefonspynės"
           value={categoryValues.title}
           required
           onChange={onChange}
@@ -38,20 +71,36 @@ export const AddCategory: React.FC = () => {
           id="altInput"
           name="alt"
           required
-          placeholder="Nuotraukos aprasymas"
+          placeholder="Nuotraukos aprasymas. Pvz.: `Eura` gamintojo telefonspynė"
           value={categoryValues.alt}
           onChange={onChange}
         />
         <input
           type="file"
           id="fileInput"
-          name="file"
+          name="image"
           required
           placeholder="Nuotrauka"
           onChange={handleFile}
         />
-        <button onSubmit={handleSubmit}>Submit</button>
+        <input
+          type="text"
+          id="hrefInput"
+          name="href"
+          required
+          placeholder="Kategorijos nuoroda. Pvz.: /kategorijos/telefonspynes"
+          onChange={onChange}
+        />
+        <input
+          type="text"
+          id="categoryKeyInput"
+          name="categoryKey"
+          required
+          placeholder="Kategorijos Key. Tai kategorijos pavadinimas tačiau parašytas mažosiomis raidėmis. Pvz.: telefonspynes arba vaizdoStebejimoSistemos"
+          onChange={onChange}
+        />
+        <button className={styles.button}>Pridėti</button>
       </form>
-    </main>
+    </div>
   );
 };
