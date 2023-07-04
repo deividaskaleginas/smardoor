@@ -4,10 +4,18 @@ import styles from "./CategoriesList.module.scss";
 import axios from "axios";
 import Image from "next/image";
 
-export const CategoriesList: React.FC = () => {
+interface CategoriesListProps {
+  getFrom: string;
+  listName: string;
+}
+
+export const CategoriesList: React.FC<CategoriesListProps> = ({
+  getFrom,
+  listName,
+}) => {
   const [categories, setCategories] = useState<any[]>([]);
   const getCategories = async () => {
-    const res = await axios.get("http://localhost:8080/kategorijos");
+    const res = await axios.get(`http://localhost:8080/${getFrom}`);
     setCategories(res.data);
   };
 
@@ -17,7 +25,7 @@ export const CategoriesList: React.FC = () => {
 
   const deleteCategory = async (id: string) => {
     try {
-      await axios.delete("http://localhost:8080/kategorijos/" + id);
+      await axios.delete(`http://localhost:8080/${getFrom}/` + id);
       window.location.reload;
     } catch (err) {
       console.log(err);
@@ -25,12 +33,12 @@ export const CategoriesList: React.FC = () => {
   };
   return (
     <section className={styles.categories}>
-      <h3>Kategorijų sąrašas:</h3>
+      <h3>{listName} sąrašas:</h3>
       {categories.map(({ id, title, image, alt, href, categoryKey }, index) => (
         <div key={index} className={styles.category}>
           <div className={styles.description}>
             <Image
-              src={`http://localhost:8080/images/${image}`}
+              src={`http://localhost:8080/images/${getFrom}/${image}`}
               alt={alt}
               height={100}
               width={100}

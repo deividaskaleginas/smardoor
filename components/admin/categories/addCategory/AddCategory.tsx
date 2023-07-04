@@ -5,7 +5,15 @@ import React, { FormEvent, useState } from "react";
 
 import styles from "./AddCategory.module.scss";
 
-export const AddCategory: React.FC = () => {
+interface AddCategoryProps {
+  addWhere: string;
+  addWhat: string;
+}
+
+export const AddCategory: React.FC<AddCategoryProps> = ({
+  addWhere,
+  addWhat,
+}) => {
   const [image, setImage] = useState<File>();
   const [categoryValues, setCategoryValues] = useState({
     title: "",
@@ -42,7 +50,7 @@ export const AddCategory: React.FC = () => {
     formData.append("categoryKey", categoryValues.categoryKey);
 
     try {
-      await axios.post("http://localhost:8080/kategorijos", formData);
+      await axios.post(`http://localhost:8080/${addWhere}`, formData);
       window.location.reload;
     } catch (err) {
       console.log(err);
@@ -51,7 +59,7 @@ export const AddCategory: React.FC = () => {
 
   return (
     <div>
-      <h3>Pridėti kategoriją:</h3>
+      <h3>{`Pridėti ${addWhat}:`}</h3>
       <form
         encType="multipart/form-data"
         onSubmit={handleSubmit}
