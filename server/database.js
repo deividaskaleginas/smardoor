@@ -8,7 +8,7 @@ const pool = mysql
     host: process.env.MYSQL_HOST,
     user: "root",
     password: "Testas123",
-    database: "smartdoorDB",
+    database: "smartdoor",
   })
   .promise();
 
