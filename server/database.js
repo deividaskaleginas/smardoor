@@ -75,6 +75,47 @@ const deleteVartuAutomatika = async (id) => {
   await pool.query(`DELETE FROM vartuautomatika WHERE id = ?`, [id]);
 };
 
+// monitoriai
+
+const getMonitoriai = async () => {
+  const [rows] = await pool.query("SELECT * FROM monitoriai");
+  return rows;
+};
+
+const createMonitoriai = async ({
+  title,
+  images,
+  alt,
+  price,
+  slug,
+  monitor_description,
+  technical_parameters,
+  instruction,
+  videos,
+  technical_images,
+}) => {
+  await pool.query(
+    `INSERT INTO monitoriai (title, images, alt, price, slug, monitor_description, technical_parameters, instruction, videos, technical_images)
+  VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    [
+      title,
+      images,
+      alt,
+      price,
+      slug,
+      monitor_description,
+      technical_parameters,
+      instruction,
+      videos,
+      technical_images,
+    ]
+  );
+};
+
+const deleteMonitoriai = async (id) => {
+  await pool.query(`DELETE FROM monitoriai WHERE id = ?`, [id]);
+};
+
 module.exports = {
   getCategories,
   createCategory,
@@ -85,4 +126,7 @@ module.exports = {
   getVartuAutomatika,
   createVartuAutomatika,
   deleteVartuAutomatika,
+  getMonitoriai,
+  createMonitoriai,
+  deleteMonitoriai,
 };
