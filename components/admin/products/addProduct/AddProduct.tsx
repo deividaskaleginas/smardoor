@@ -5,6 +5,9 @@ import { MonitorTechnicalParams } from "@/types/monitorTypes";
 import { ProductTechnicalParams } from "./productTechnicalParams/ProductTechnicalParams";
 import { ProductTechnicalImages } from "./productTechnicalImages/ProductTechnicalImages";
 
+import styles from "./AddProduct.module.scss";
+import { ProductVideos } from "./productVideos/ProductVideos";
+
 interface AddProductProps {
   product: string;
 }
@@ -33,7 +36,7 @@ export const AddProduct: React.FC<AddProductProps> = ({ product }) => {
       matmenys: "",
     });
   return (
-    <div>
+    <form encType="multipart/form-data" className={styles.form}>
       <ProductGeneralValues
         productGeneralValues={productGeneralValues}
         setProductGeneralValues={setProductGeneralValues}
@@ -45,6 +48,8 @@ export const AddProduct: React.FC<AddProductProps> = ({ product }) => {
         setMonitorTechnicalParams={setMonitorTechnicalParams}
       />
       <ProductTechnicalImages setTechnicalImages={setTechnicalImages} />
-    </div>
+      <ProductVideos videos={videos} setVideos={setVideos} />
+      <button className={styles.button}>Pridėti</button>
+    </form>
   );
 };
