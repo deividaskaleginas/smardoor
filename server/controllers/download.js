@@ -1,8 +1,18 @@
 const express = require("express");
-const path = require("path");
 
 const downloadFileFromServer = async (req, res) => {
-  res.download(`../public/images/monitoriai/assa1.jpeg`);
+  const filePath =
+    __dirname + "/public/images/monitoriai/" + req.params.filename;
+
+  res.download(filePath, req.params.filename, (err) => {
+    console.log(req.params.filename);
+    if (err) {
+      res.send({
+        error: err,
+        msg: "Problem downloading the file",
+      });
+    }
+  });
 };
 
 module.exports = {

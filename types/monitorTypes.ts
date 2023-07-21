@@ -33,7 +33,7 @@ export interface MonitorType {
   alt: string;
   price: string;
   slug: string;
-  monitor_description: string;
+  product_description: string;
   technical_parameters: MonitorTechnicalParams;
   instruction: FileType[];
   videos: string[];

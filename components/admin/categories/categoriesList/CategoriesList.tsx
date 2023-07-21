@@ -3,17 +3,16 @@ import React, { useEffect, useState } from "react";
 import styles from "./CategoriesList.module.scss";
 import axios from "axios";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 interface CategoriesListProps {
   getFrom: string;
-  listName: string;
 }
 
-export const CategoriesList: React.FC<CategoriesListProps> = ({
-  getFrom,
-  listName,
-}) => {
+export const CategoriesList: React.FC<CategoriesListProps> = ({ getFrom }) => {
   const [categories, setCategories] = useState<any[]>([]);
+  const router = useRouter();
+  const pathName = usePathname();
   const getCategories = async () => {
     const res = await axios.get(`http://localhost:8080/${getFrom}`);
     setCategories(res.data);
@@ -23,6 +22,10 @@ export const CategoriesList: React.FC<CategoriesListProps> = ({
     getCategories();
   }, []);
 
+  const handleNavigate = (href: string) => {
+    router.push(`${pathName}/${href}`);
+  };
+
   const deleteCategory = async (id: string) => {
     try {
       await axios.delete(`http://localhost:8080/${getFrom}/` + id);
@@ -31,11 +34,17 @@ export const CategoriesList: React.FC<CategoriesListProps> = ({
       console.log(err);
     }
   };
+
+  console.log(categories);
   return (
     <section className={styles.categories}>
-      <h3>{listName} sąrašas:</h3>
+      <h3>Sąrašas:</h3>
       {categories.map(({ id, title, image, alt, href, categoryKey }, index) => (
-        <div key={index} className={styles.category}>
+        <div
+          key={index}
+          className={styles.category}
+          onClick={() => handleNavigate(categoryKey)}
+        >
           <div className={styles.description}>
             <Image
               src={`http://localhost:8080/images/${getFrom}/${image}`}

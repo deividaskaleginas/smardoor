@@ -88,14 +88,14 @@ const createMonitoriai = async ({
   alt,
   price,
   slug,
-  monitor_description,
+  product_description,
   technical_parameters,
   instruction,
   videos,
   technical_images,
 }) => {
   await pool.query(
-    `INSERT INTO monitoriai (title, images, alt, price, slug, monitor_description, technical_parameters, instruction, videos, technical_images)
+    `INSERT INTO monitoriai (title, images, alt, price, slug, product_description, technical_parameters, instruction, videos, technical_images)
   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
     [
       title,
@@ -103,7 +103,7 @@ const createMonitoriai = async ({
       alt,
       price,
       slug,
-      monitor_description,
+      product_description,
       technical_parameters,
       instruction,
       videos,

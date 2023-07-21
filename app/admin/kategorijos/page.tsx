@@ -12,8 +12,8 @@ export default function Page() {
   return (
     <main className={styles.kategorijos}>
       <div className={styles.wrapper}>
-        <CategoriesList getFrom="kategorijos" listName="Kategorijų" />
-        <AddCategory addWhere="kategorijos" addWhat="kategoriją" />
+        <CategoriesList getFrom="kategorijos" />
+        <AddCategory addWhere="kategorijos" />
       </div>
     </main>
   );

@@ -32,7 +32,7 @@ const createMonitoriaiToServer = async (req, res) => {
     alt: req.body.alt,
     price: req.body.price,
     slug: req.body.slug,
-    monitor_description: req.body.monitor_description,
+    product_description: req.body.product_description,
     technical_parameters: req.body.technical_parameters,
     instruction: JSON.stringify(req.files["instruction"]),
     videos: req.body.videos,

@@ -1,0 +1,24 @@
+.wrapper {
+  margin-top: 2rem;
+  .paragraph {
+  }
+  .contacts {
+    display: flex;
+    gap: 1rem;
+
+    .mobileBlock {
+      display: flex;
+      gap: 0.5rem;
+      .mobileLink {
+        color: var(--black);
+      }
+    }
+    .emailBlock {
+      display: flex;
+      gap: 0.5rem;
+      .emailLink {
+        color: #428bca;
+      }
+    }
+  }
+}

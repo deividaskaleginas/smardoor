@@ -20,6 +20,7 @@ import Image from "next/image";
 // Swiper modules
 
 import arrowDown from "../../../../../public/assets/icons/arrowDown.svg";
+import { ContactForProduct } from "@/components/contactForProduct/ContactForProduct";
 
 export default function Page({ params }: { params: { slug: string } }) {
   const [monitors, setMonitors] = useState<MonitorType[]>([]);
@@ -105,8 +106,9 @@ export default function Page({ params }: { params: { slug: string } }) {
           </div>
           <div className={styles.desctiptionBlock}>
             <h3 className={styles.title}>{product?.title}</h3>
-            <p className={styles.description}>{product?.monitor_description}</p>
+            <p className={styles.description}>{product?.product_description}</p>
             <span className={styles.price}>{product?.price} €</span>
+            <ContactForProduct />
           </div>
         </div>
         {product?.technical_parameters && (

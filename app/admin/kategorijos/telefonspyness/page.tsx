@@ -8,8 +8,8 @@ export default function Page() {
   return (
     <main className={styles.telefonspynes}>
       <div className={styles.wrapper}>
-        <CategoriesList getFrom="telefonspynes" listName="Telefonspynių" />
-        <AddCategory addWhere="telefonspynes" addWhat="telefonspynę" />
+        <CategoriesList getFrom="telefonspynes" />
+        <AddCategory addWhere="telefonspynes" />
       </div>
     </main>
   );

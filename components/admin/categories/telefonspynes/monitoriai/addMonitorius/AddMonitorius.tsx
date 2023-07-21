@@ -11,7 +11,7 @@ export const AddMonitorius: React.FC = () => {
   const [instruction, setInstruction] = useState<File>();
   const [videos, setVideos] = useState<string[]>(["", "", ""]);
   const [technicalImages, setTechnicalImages] = useState<File[]>();
-  const [technicalParams, setTechnicalParams] =
+  const [monitorTechnicalParams, setMonitorTechnicalParams] =
     useState<MonitorTechnicalParams>({
       kortelesLizdas: "",
       ekranas: "",
@@ -21,26 +21,25 @@ export const AddMonitorius: React.FC = () => {
       dregme: "",
       matmenys: "",
     });
-  const [monitorsValues, setMonitorsValues] = useState({
+  const [productGeneralValues, setProductGeneralValues] = useState({
     title: "",
     alt: "",
     price: "",
     slug: "",
-    monitor_description: "",
-    technical_parameters: "",
+    product_description: "",
   });
 
   const onChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setMonitorsValues((prev) => ({
+    setProductGeneralValues((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
 
   const technicalParamsOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setTechnicalParams((prev) => ({
+    setMonitorTechnicalParams((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
@@ -82,12 +81,18 @@ export const AddMonitorius: React.FC = () => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("title", monitorsValues.title);
-    formData.append("alt", monitorsValues.alt);
-    formData.append("price", monitorsValues.price);
-    formData.append("slug", monitorsValues.slug);
-    formData.append("monitor_description", monitorsValues.monitor_description);
-    formData.append("technical_parameters", JSON.stringify(technicalParams));
+    formData.append("title", productGeneralValues.title);
+    formData.append("alt", productGeneralValues.alt);
+    formData.append("price", productGeneralValues.price);
+    formData.append("slug", productGeneralValues.slug);
+    formData.append(
+      "product_description",
+      productGeneralValues.product_description
+    );
+    formData.append(
+      "technical_parameters",
+      JSON.stringify(monitorTechnicalParams)
+    );
 
     if (images) {
       images.map((image) => {
@@ -120,7 +125,7 @@ export const AddMonitorius: React.FC = () => {
 
   return (
     <div>
-      <h3>{`Pridėti monitoriu:`}</h3>
+      <h3>{`Pridėti monitorių:`}</h3>
       <form
         encType="multipart/form-data"
         onSubmit={handleSubmit}
@@ -131,7 +136,7 @@ export const AddMonitorius: React.FC = () => {
           id="titleInput"
           name="title"
           placeholder="Monitoriaus pavadinimas. Pvz.: Monitorius Akuvox C315S"
-          value={monitorsValues.title}
+          value={productGeneralValues.title}
           required
           onChange={onChange}
         />
@@ -149,7 +154,7 @@ export const AddMonitorius: React.FC = () => {
           id="altInput"
           name="alt"
           placeholder="Nuotraukų pavadinimas. Pvz.: Monitorius Akuvox C315S"
-          value={monitorsValues.alt}
+          value={productGeneralValues.alt}
           required
           onChange={onChange}
         />
@@ -158,7 +163,7 @@ export const AddMonitorius: React.FC = () => {
           id="priceInput"
           name="price"
           placeholder="Kaina"
-          value={monitorsValues.price}
+          value={productGeneralValues.price}
           required
           onChange={onChange}
         />
@@ -167,14 +172,14 @@ export const AddMonitorius: React.FC = () => {
           id="slugInput"
           name="slug"
           placeholder="nuoroda, kurią vartotojas matys paspaudęs ant prekės. Pvz.: kuvox-c315s"
-          value={monitorsValues.slug}
+          value={productGeneralValues.slug}
           required
           onChange={onChange}
         />
         <textarea
-          name="monitor_description"
+          name="product_description"
           placeholder="Monitoriaus aprašymas"
-          value={monitorsValues.monitor_description}
+          value={productGeneralValues.product_description}
           required
           onChange={onChange}
         />
@@ -184,7 +189,7 @@ export const AddMonitorius: React.FC = () => {
           id="kortelesLizdasInput"
           name="kortelesLizdas"
           placeholder="Kortelės lizdas. Pvz.: SD kortelės lustas (iki 128GB)"
-          value={technicalParams.kortelesLizdas}
+          value={monitorTechnicalParams.kortelesLizdas}
           onChange={technicalParamsOnChange}
         />
         <input
@@ -192,7 +197,7 @@ export const AddMonitorius: React.FC = () => {
           id="ekranasInput"
           name="ekranas"
           placeholder="Ekranas. Pvz.: 7 colių Spalvotas TFT ekranas"
-          value={technicalParams.ekranas}
+          value={monitorTechnicalParams.ekranas}
           onChange={technicalParamsOnChange}
         />
         <input
@@ -200,7 +205,7 @@ export const AddMonitorius: React.FC = () => {
           id="rezoliucijaInput"
           name="rezoliucija"
           placeholder="Rezoliucija. Pvz.: 1024x600"
-          value={technicalParams.rezoliucija}
+          value={monitorTechnicalParams.rezoliucija}
           onChange={technicalParamsOnChange}
         />
         <input
@@ -208,7 +213,7 @@ export const AddMonitorius: React.FC = () => {
           id="maitinimasInput"
           name="maitinimas"
           placeholder="Maitinimas. Pvz.: 	12V, PoE"
-          value={technicalParams.maitinimas}
+          value={monitorTechnicalParams.maitinimas}
           onChange={technicalParamsOnChange}
         />
         <input
@@ -216,7 +221,7 @@ export const AddMonitorius: React.FC = () => {
           id="darbineTemperaturaInput"
           name="darbineTemperatura"
           placeholder="Darbinė temperatūra. Pvz.: 	Nuo -10° iki 45°C"
-          value={technicalParams.darbineTemperatura}
+          value={monitorTechnicalParams.darbineTemperatura}
           onChange={technicalParamsOnChange}
         />
         <input
@@ -224,7 +229,7 @@ export const AddMonitorius: React.FC = () => {
           id="dregmeInput"
           name="dregme"
           placeholder="Dregmė. Pvz.: 	Nuo 10% iki 90% (be kondensacijos)"
-          value={technicalParams.dregme}
+          value={monitorTechnicalParams.dregme}
           onChange={technicalParamsOnChange}
         />
         <input
@@ -232,7 +237,7 @@ export const AddMonitorius: React.FC = () => {
           id="matmenysInput"
           name="matmenys"
           placeholder="Matmenys. Pvz.: 	185 x 127,5 x 18 mm"
-          value={technicalParams.matmenys}
+          value={monitorTechnicalParams.matmenys}
           onChange={technicalParamsOnChange}
         />
         <h5>Instrukcija</h5>
@@ -277,7 +282,7 @@ export const AddMonitorius: React.FC = () => {
           placeholder="Nuotraukos"
           onChange={handleTechnicalImages}
         />
-        <button>Pridėti</button>
+        <button className={styles.button}>Pridėti</button>
       </form>
     </div>
   );

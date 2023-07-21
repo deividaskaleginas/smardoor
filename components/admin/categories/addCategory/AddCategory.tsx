@@ -7,13 +7,9 @@ import styles from "./AddCategory.module.scss";
 
 interface AddCategoryProps {
   addWhere: string;
-  addWhat: string;
 }
 
-export const AddCategory: React.FC<AddCategoryProps> = ({
-  addWhere,
-  addWhat,
-}) => {
+export const AddCategory: React.FC<AddCategoryProps> = ({ addWhere }) => {
   const [image, setImage] = useState<File>();
   const [categoryValues, setCategoryValues] = useState({
     title: "",
@@ -59,7 +55,7 @@ export const AddCategory: React.FC<AddCategoryProps> = ({
 
   return (
     <div>
-      <h3>{`Pridėti ${addWhat}:`}</h3>
+      <h3>{`Pridėti:`}</h3>
       <form
         encType="multipart/form-data"
         onSubmit={handleSubmit}
