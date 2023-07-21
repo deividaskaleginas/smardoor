@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .title {
+    margin: 0;
+  }
+  .inputBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
