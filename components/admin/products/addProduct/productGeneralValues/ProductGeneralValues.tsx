@@ -1,7 +1,7 @@
 import { ProductGeneralValuesTypes } from "@/types/productTypes";
 import React from "react";
 
-import styles from "./ProductGeneralValues.module.scss";
+import styles from "../Components.module.scss";
 
 interface ProductGeneralValuesProps {
   productGeneralValues: ProductGeneralValuesTypes;

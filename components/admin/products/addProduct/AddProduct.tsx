@@ -7,6 +7,7 @@ import { ProductTechnicalImages } from "./productTechnicalImages/ProductTechnica
 
 import styles from "./AddProduct.module.scss";
 import { ProductVideos } from "./productVideos/ProductVideos";
+import { ProductInstruction } from "./productInstruction/ProductInstruction";
 
 interface AddProductProps {
   product: string;
@@ -49,6 +50,7 @@ export const AddProduct: React.FC<AddProductProps> = ({ product }) => {
       />
       <ProductTechnicalImages setTechnicalImages={setTechnicalImages} />
       <ProductVideos videos={videos} setVideos={setVideos} />
+      <ProductInstruction setInstruction={setInstruction} />
       <button className={styles.button}>Pridėti</button>
     </form>
   );

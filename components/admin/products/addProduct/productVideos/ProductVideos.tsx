@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./ProductVideos.module.scss";
+import styles from "../Components.module.scss";
 
 interface ProductVideosProps {
   videos: string[];

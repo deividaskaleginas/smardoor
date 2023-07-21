@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./ProductTechnicalImages.module.scss";
+import styles from "../Components.module.scss";
 
 interface ProductTechnicalImagesProps {
   setTechnicalImages: React.Dispatch<React.SetStateAction<File[] | undefined>>;

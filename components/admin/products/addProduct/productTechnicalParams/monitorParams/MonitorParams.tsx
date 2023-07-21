@@ -1,7 +1,7 @@
 import { MonitorTechnicalParams } from "@/types/monitorTypes";
 import React from "react";
 
-import styles from "./MonitorParams.module.scss";
+import styles from "../../Components.module.scss";
 
 interface MonitorParamsProps {
   monitorTechnicalParams: MonitorTechnicalParams;
