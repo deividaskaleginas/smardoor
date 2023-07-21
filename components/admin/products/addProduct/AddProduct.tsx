@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { ProductGeneralValues } from "./productGeneralValues/ProductGeneralValues";
 import { MonitorTechnicalParams } from "@/types/monitorTypes";
 import { ProductTechnicalParams } from "./productTechnicalParams/ProductTechnicalParams";
+import { ProductTechnicalImages } from "./productTechnicalImages/ProductTechnicalImages";
 
 interface AddProductProps {
   product: string;
@@ -43,6 +44,7 @@ export const AddProduct: React.FC<AddProductProps> = ({ product }) => {
         monitorTechnicalParams={monitorTechnicalParams}
         setMonitorTechnicalParams={setMonitorTechnicalParams}
       />
+      <ProductTechnicalImages setTechnicalImages={setTechnicalImages} />
     </div>
   );
 };
