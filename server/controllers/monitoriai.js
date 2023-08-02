@@ -39,6 +39,8 @@ const createMonitoriaiToServer = async (req, res) => {
     technical_images: JSON.stringify(req.files["technical_images"]),
   };
 
+  console.log(info);
+
   const monitorius = await createMonitoriai(info);
   res.status(200).send(monitorius);
 };

@@ -52,7 +52,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     setActiveDataDivIndex(index);
   };
 
-  console.log(product?.instruction);
+  console.log(product?.technical_parameters);
 
   return (
     <main className={styles.item}>
